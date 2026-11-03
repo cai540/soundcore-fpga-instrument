@@ -1,0 +1,250 @@
+{
+  "board": "Tang Mega 60K + Tang Mega NEO Dock, schematic rev 1.4",
+  "constraint": "build/speaker_led8_20261031/baseline/board/soundcore_speaker_omr_60k.cst",
+  "j13_anchor": "A/B排和第1组保持最初的定义，新1号灯在A8，不能重新当成第1组。",
+  "signals": [
+    {
+      "part": "ADC CS",
+      "signal": "adc_cs_n",
+      "ball": "P16",
+      "header": "PMOD0/J9",
+      "pin": 7,
+      "location": "背面照片下排第4个"
+    },
+    {
+      "part": "ADC CLK",
+      "signal": "adc_sclk",
+      "ball": "R17",
+      "header": "PMOD0/J9",
+      "pin": 8,
+      "location": "背面照片上排第4个"
+    },
+    {
+      "part": "ADC DIN",
+      "signal": "adc_mosi",
+      "ball": "R18",
+      "header": "PMOD0/J9",
+      "pin": 5,
+      "location": "背面照片下排第3个"
+    },
+    {
+      "part": "ADC OUT",
+      "signal": "adc_miso",
+      "ball": "T18",
+      "header": "PMOD0/J9",
+      "pin": 6,
+      "location": "背面照片上排第3个"
+    },
+    {
+      "part": "MAX BCLK",
+      "signal": "dac_bclk",
+      "ball": "Y21",
+      "header": "PMOD1/J8",
+      "pin": 11,
+      "location": "背面照片下排最右"
+    },
+    {
+      "part": "MAX LRC",
+      "signal": "dac_lrclk",
+      "ball": "Y22",
+      "header": "PMOD1/J8",
+      "pin": 12,
+      "location": "背面照片上排最右"
+    },
+    {
+      "part": "MAX DIN",
+      "signal": "dac_din",
+      "ball": "AB21",
+      "header": "PMOD1/J8",
+      "pin": 9,
+      "location": "背面照片下排右数第二"
+    },
+    {
+      "part": "EC11 S1",
+      "signal": "enc_s1_n",
+      "ball": "AA20",
+      "header": "PMOD1/J8",
+      "pin": 7,
+      "location": "背面照片下排左数第4个"
+    },
+    {
+      "part": "EC11 S2",
+      "signal": "enc_s2_n",
+      "ball": "AA21",
+      "header": "PMOD1/J8",
+      "pin": 8,
+      "location": "背面照片上排左数第4个"
+    },
+    {
+      "part": "EC11 KEY",
+      "signal": "enc_key_n",
+      "ball": "AA19",
+      "header": "PMOD1/J8",
+      "pin": 5,
+      "location": "背面照片下排左数第3个"
+    },
+    {
+      "part": "AI0对应LED",
+      "signal": "pad_led_o[0]",
+      "ball": "A20",
+      "header": "J13",
+      "pin": 15,
+      "location": "A排第8组"
+    },
+    {
+      "part": "AI1对应LED",
+      "signal": "pad_led_o[1]",
+      "ball": "B20",
+      "header": "J13",
+      "pin": 16,
+      "location": "B排第8组"
+    },
+    {
+      "part": "AI2对应LED",
+      "signal": "pad_led_o[2]",
+      "ball": "A21",
+      "header": "J13",
+      "pin": 17,
+      "location": "A排第9组"
+    },
+    {
+      "part": "AI3对应LED",
+      "signal": "pad_led_o[3]",
+      "ball": "B21",
+      "header": "J13",
+      "pin": 18,
+      "location": "B排第9组"
+    },
+    {
+      "part": "AI4对应LED",
+      "signal": "pad_led_o[4]",
+      "ball": "D17",
+      "header": "J13",
+      "pin": 22,
+      "location": "B排第11组"
+    },
+    {
+      "part": "AI5对应LED",
+      "signal": "pad_led_o[5]",
+      "ball": "A19",
+      "header": "J13",
+      "pin": 23,
+      "location": "A排第12组"
+    },
+    {
+      "part": "AI6对应LED",
+      "signal": "pad_led_o[6]",
+      "ball": "A18",
+      "header": "J13",
+      "pin": 24,
+      "location": "B排第12组"
+    },
+    {
+      "part": "K1 音区减",
+      "signal": "panel_bank_down_n",
+      "ball": "D15",
+      "header": "J13",
+      "pin": 25,
+      "location": "A排第13组"
+    },
+    {
+      "part": "K2 音区加",
+      "signal": "panel_bank_up_n",
+      "ball": "D14",
+      "header": "J13",
+      "pin": 26,
+      "location": "B排第13组"
+    },
+    {
+      "part": "K3 音色",
+      "signal": "panel_timbre_n",
+      "ball": "D16",
+      "header": "J13",
+      "pin": 27,
+      "location": "A排第14组"
+    },
+    {
+      "part": "K4 曲目返回",
+      "signal": "panel_song_back_n",
+      "ball": "E16",
+      "header": "J13",
+      "pin": 28,
+      "location": "B排第14组"
+    },
+    {
+      "part": "K5 开始暂停",
+      "signal": "panel_play_pause_n",
+      "ball": "E17",
+      "header": "J13",
+      "pin": 31,
+      "location": "A排第16组"
+    },
+    {
+      "part": "K5灯驱动控制（预留）",
+      "signal": "guide_button_led_o",
+      "ball": "B17",
+      "header": "J13",
+      "pin": 20,
+      "location": "B排第10组"
+    },
+    {
+      "part": "OLED SCL",
+      "signal": "oled_scl",
+      "ball": "B18",
+      "header": "J13",
+      "pin": 19,
+      "location": "A排第10组"
+    },
+    {
+      "part": "OLED SDA",
+      "signal": "oled_sda",
+      "ball": "C17",
+      "header": "J13",
+      "pin": 21,
+      "location": "A排第11组"
+    },
+    {
+      "part": "蓝牙 TXD 至FPGA接收",
+      "signal": "ble_uart_rx",
+      "ball": "F16",
+      "header": "J13",
+      "pin": 32,
+      "location": "B排第16组"
+    },
+    {
+      "part": "蓝牙 RXD 至FPGA发送",
+      "signal": "ble_uart_tx",
+      "ball": "F15",
+      "header": "J13",
+      "pin": 34,
+      "location": "B排第17组"
+    }
+  ],
+  "power": {
+    "J13_A6": {
+      "pin": 11,
+      "net": "5V_Peripheral"
+    },
+    "J13_B6": {
+      "pin": 12,
+      "net": "GND"
+    }
+  },
+  "fsr_reproduction": {
+    "supply": "ADC module 3V3 output",
+    "upper_ohm": 4700,
+    "lower_ohm": 10000,
+    "channels": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6
+    ]
+  },
+  "ordinary_led_series_ohm": 1000,
+  "max_sd_pullup_ohm": 10000,
+  "status": "ready_not_programmed; UserCode05D8; all LEDs from group8"
+}

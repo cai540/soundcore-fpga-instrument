@@ -1,0 +1,17 @@
+{
+  "schema_version": 1,
+  "name": "J13 LEDs from group 8",
+  "minimum_group": 8,
+  "anchor": "A/B rows and group 1 retain the previously confirmed direction; count paired groups along each row",
+  "schematic": "Tang Mega NEO Dock rev1.4 pages 7 and 19",
+  "leds": [
+    {"led": 1, "position": "A8", "group": 8, "row": "A", "header_pin": 15, "ball": "A20", "net": "SDRAM0_D11"},
+    {"led": 2, "position": "B8", "group": 8, "row": "B", "header_pin": 16, "ball": "B20", "net": "SDRAM0_D10"},
+    {"led": 3, "position": "A9", "group": 9, "row": "A", "header_pin": 17, "ball": "A21", "net": "SDRAM0_D9"},
+    {"led": 4, "position": "B9", "group": 9, "row": "B", "header_pin": 18, "ball": "B21", "net": "SDRAM0_D8"},
+    {"led": 5, "position": "B11", "group": 11, "row": "B", "header_pin": 22, "ball": "D17", "net": "SDRAM0_A11"},
+    {"led": 6, "position": "A12", "group": 12, "row": "A", "header_pin": 23, "ball": "A19", "net": "SDRAM0_A7"},
+    {"led": 7, "position": "B12", "group": 12, "row": "B", "header_pin": 24, "ball": "A18", "net": "SDRAM0_A8"}
+  ],
+  "occupied_positions_to_preserve": ["A10", "A11", "B10", "A13", "B13", "A14", "B14", "A16", "B16", "B17"]
+}

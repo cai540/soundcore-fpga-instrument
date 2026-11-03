@@ -1,0 +1,21 @@
+{
+  "schema_version": 1,
+  "name": "clear_reed_balanced_bow_v2_20261101",
+  "provenance": "hand-designed correction after reported harshness; not measured instrument calibration; listening acceptance pending",
+  "sample_rate_hz": 48000,
+  "attack_hold_frames": 1920,
+  "control_interval_frames": 24,
+  "deadband": 3,
+  "slew_up": 4,
+  "slew_down": 2,
+  "target_wave_rms": 2700,
+  "raw_weight_scale": 0.085,
+  "harmonica_soft": [1.0, 0.28, 0.10, 0.035, 0.014, 0.006],
+  "harmonica_strong": [1.0, 0.43, 0.18, 0.070, 0.028, 0.012],
+  "erhu_soft": [0.85, 0.55, 0.36, 0.22, 0.13, 0.08],
+  "erhu_strong": [0.80, 0.62, 0.50, 0.32, 0.20, 0.12],
+  "harmonica_body": {"floor": 0.95, "peak": 0.12, "centre_hz": 1100, "width_octaves": 1.1, "rolloff_hz": 14000},
+  "erhu_body": {"floor": 0.80, "peak": 0.38, "centre_hz": 1600, "width_octaves": 0.9, "rolloff_hz": 14000},
+  "quiet_texture_shift": 18,
+  "requires_manual_boot_calibration": false
+}

@@ -1,0 +1,236 @@
+{
+  "split": "development",
+  "provenance": "independently transcribed user score main notes; approximate outer phrase spans only",
+  "timing_gold_available": false,
+  "cases": [
+    {
+      "id": "zuguo_first_verse",
+      "observations": "D:\\FPGA\\Projects\\soundcore_2026\\build\\vocal_decoder_refactor_20261030\\context_medium\\zuguo\\observations.npz",
+      "source_offset_s": 47.09,
+      "phrases": [
+        {
+          "recording": "zuguo",
+          "text": "我和我的祖国",
+          "source_span_s": [
+            47.1,
+            52.0
+          ],
+          "pitches": [
+            72,
+            74,
+            72,
+            70,
+            69,
+            67,
+            65,
+            60
+          ],
+          "score_transpose_semitones": 2
+        },
+        {
+          "recording": "zuguo",
+          "text": "一刻也不能分割",
+          "source_span_s": [
+            52.2,
+            57.4
+          ],
+          "pitches": [
+            65,
+            69,
+            77,
+            76,
+            74,
+            69,
+            72
+          ],
+          "score_transpose_semitones": 2
+        },
+        {
+          "recording": "zuguo",
+          "text": "无论我走到哪里",
+          "source_span_s": [
+            57.4,
+            62.5
+          ],
+          "pitches": [
+            74,
+            76,
+            74,
+            72,
+            70,
+            69,
+            67,
+            62
+          ],
+          "score_transpose_semitones": 2
+        },
+        {
+          "recording": "zuguo",
+          "text": "都流出一首赞歌",
+          "source_span_s": [
+            62.6,
+            67.7
+          ],
+          "pitches": [
+            64,
+            62,
+            60,
+            72,
+            65,
+            67,
+            69
+          ],
+          "score_transpose_semitones": 2
+        },
+        {
+          "recording": "zuguo",
+          "text": "我歌唱每一座高山",
+          "source_span_s": [
+            67.7,
+            72.9
+          ],
+          "pitches": [
+            72,
+            74,
+            72,
+            70,
+            69,
+            67,
+            65,
+            60
+          ],
+          "score_transpose_semitones": 2
+        },
+        {
+          "recording": "zuguo",
+          "text": "我歌唱每一条河",
+          "source_span_s": [
+            73.0,
+            78.2
+          ],
+          "pitches": [
+            65,
+            69,
+            77,
+            76,
+            79,
+            77,
+            74
+          ],
+          "score_transpose_semitones": 2
+        },
+        {
+          "recording": "zuguo",
+          "text": "袅袅炊烟",
+          "source_span_s": [
+            78.2,
+            80.8
+          ],
+          "pitches": [
+            77,
+            76,
+            74,
+            72
+          ],
+          "score_transpose_semitones": 2
+        },
+        {
+          "recording": "zuguo",
+          "text": "小小村落",
+          "source_span_s": [
+            80.9,
+            83.4
+          ],
+          "pitches": [
+            74,
+            72,
+            70,
+            69
+          ],
+          "score_transpose_semitones": 2
+        }
+      ]
+    },
+    {
+      "id": "qiansixi_first_verse",
+      "observations": "D:\\FPGA\\Projects\\soundcore_2026\\build\\vocal_decoder_refactor_20261030\\context_medium\\qiansixi\\observations.npz",
+      "source_offset_s": 20.0,
+      "phrases": [
+        {
+          "recording": "qiansixi",
+          "text": "嘲笑谁恃美扬威",
+          "source_span_s": [
+            24.1,
+            29.4
+          ],
+          "pitches": [
+            65,
+            64,
+            60,
+            60,
+            57,
+            60,
+            62
+          ]
+        },
+        {
+          "recording": "qiansixi",
+          "text": "没了心如何相配",
+          "source_span_s": [
+            29.5,
+            34.2
+          ],
+          "pitches": [
+            65,
+            64,
+            60,
+            60,
+            57,
+            67,
+            69
+          ]
+        },
+        {
+          "recording": "qiansixi",
+          "text": "盘铃声清脆帷幕间灯火幽微",
+          "source_span_s": [
+            34.4,
+            40.2
+          ],
+          "pitches": [
+            69,
+            72,
+            67,
+            69,
+            67,
+            65,
+            64,
+            65,
+            64,
+            65,
+            67,
+            69
+          ]
+        },
+        {
+          "recording": "qiansixi",
+          "text": "我和你最天生一对",
+          "source_span_s": [
+            40.3,
+            46.0
+          ],
+          "pitches": [
+            67,
+            69,
+            62,
+            67,
+            69,
+            62,
+            60,
+            62
+          ]
+        }
+      ]
+    }
+  ]
+}

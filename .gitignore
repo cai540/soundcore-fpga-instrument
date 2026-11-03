@@ -1,0 +1,14 @@
+**/build/
+**/.gradle/
+**/.kotlin/
+**/__pycache__/
+**/.pytest_cache/
+**/local.properties
+.env*
+*.jks
+*.keystore
+*.fs
+*.apk
+*.wav
+*.mp3
+*.vcd

@@ -1,0 +1,4 @@
+{
+  "source": "Independently inspected supplied images; these are evaluation labels, never runtime song rules.",
+  "non_notes": [{"page":"lantingxu_p1","box":[103,202,108,222],"class":10,"description":"opening parenthesis before the first rest"}]
+}

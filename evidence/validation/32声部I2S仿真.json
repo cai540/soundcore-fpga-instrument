@@ -1,0 +1,205 @@
+{
+  "source": "decoded actual RTL I2S, not hardware",
+  "voices": 32,
+  "sample_rate": 48000,
+  "throughput": 1536000,
+  "notes": [
+    {
+      "midi": 60,
+      "target_hz": 261.6255653005986,
+      "fft_peak_hz": 263.671875,
+      "joint_sinusoidal_fit_amplitude": 888.4074287336973
+    },
+    {
+      "midi": 61,
+      "target_hz": 277.1826309768721,
+      "fft_peak_hz": 275.390625,
+      "joint_sinusoidal_fit_amplitude": 887.6347431044634
+    },
+    {
+      "midi": 62,
+      "target_hz": 293.6647679174076,
+      "fft_peak_hz": 292.96875,
+      "joint_sinusoidal_fit_amplitude": 887.0958194400482
+    },
+    {
+      "midi": 63,
+      "target_hz": 311.1269837220809,
+      "fft_peak_hz": 310.546875,
+      "joint_sinusoidal_fit_amplitude": 888.4628576835644
+    },
+    {
+      "midi": 64,
+      "target_hz": 329.6275569128699,
+      "fft_peak_hz": 328.125,
+      "joint_sinusoidal_fit_amplitude": 889.6504770032712
+    },
+    {
+      "midi": 65,
+      "target_hz": 349.2282314330039,
+      "fft_peak_hz": 351.5625,
+      "joint_sinusoidal_fit_amplitude": 889.8330495009255
+    },
+    {
+      "midi": 66,
+      "target_hz": 369.9944227116344,
+      "fft_peak_hz": 369.140625,
+      "joint_sinusoidal_fit_amplitude": 890.064863825931
+    },
+    {
+      "midi": 67,
+      "target_hz": 391.99543598174927,
+      "fft_peak_hz": 392.578125,
+      "joint_sinusoidal_fit_amplitude": 889.8723680795963
+    },
+    {
+      "midi": 68,
+      "target_hz": 415.3046975799451,
+      "fft_peak_hz": 416.015625,
+      "joint_sinusoidal_fit_amplitude": 889.8698688939812
+    },
+    {
+      "midi": 69,
+      "target_hz": 440.0,
+      "fft_peak_hz": 439.453125,
+      "joint_sinusoidal_fit_amplitude": 889.0178125797402
+    },
+    {
+      "midi": 70,
+      "target_hz": 466.1637615180899,
+      "fft_peak_hz": 468.75,
+      "joint_sinusoidal_fit_amplitude": 888.1429812103843
+    },
+    {
+      "midi": 71,
+      "target_hz": 493.8833012561241,
+      "fft_peak_hz": 492.1875,
+      "joint_sinusoidal_fit_amplitude": 887.1636279934331
+    },
+    {
+      "midi": 72,
+      "target_hz": 523.2511306011972,
+      "fft_peak_hz": 521.484375,
+      "joint_sinusoidal_fit_amplitude": 887.9153221235144
+    },
+    {
+      "midi": 73,
+      "target_hz": 554.3652619537442,
+      "fft_peak_hz": 556.640625,
+      "joint_sinusoidal_fit_amplitude": 888.2937176040165
+    },
+    {
+      "midi": 74,
+      "target_hz": 587.3295358348151,
+      "fft_peak_hz": 585.9375,
+      "joint_sinusoidal_fit_amplitude": 887.685533596425
+    },
+    {
+      "midi": 75,
+      "target_hz": 622.2539674441618,
+      "fft_peak_hz": 621.09375,
+      "joint_sinusoidal_fit_amplitude": 888.0279774071872
+    },
+    {
+      "midi": 76,
+      "target_hz": 659.2551138257398,
+      "fft_peak_hz": 662.109375,
+      "joint_sinusoidal_fit_amplitude": 888.0677098280984
+    },
+    {
+      "midi": 77,
+      "target_hz": 698.4564628660078,
+      "fft_peak_hz": 697.265625,
+      "joint_sinusoidal_fit_amplitude": 889.377730408361
+    },
+    {
+      "midi": 78,
+      "target_hz": 739.9888454232688,
+      "fft_peak_hz": 738.28125,
+      "joint_sinusoidal_fit_amplitude": 889.7573384189533
+    },
+    {
+      "midi": 79,
+      "target_hz": 783.9908719634985,
+      "fft_peak_hz": 785.15625,
+      "joint_sinusoidal_fit_amplitude": 889.3764794082342
+    },
+    {
+      "midi": 80,
+      "target_hz": 830.6093951598903,
+      "fft_peak_hz": 832.03125,
+      "joint_sinusoidal_fit_amplitude": 889.0120603072564
+    },
+    {
+      "midi": 81,
+      "target_hz": 880.0,
+      "fft_peak_hz": 878.90625,
+      "joint_sinusoidal_fit_amplitude": 888.4839141559684
+    },
+    {
+      "midi": 82,
+      "target_hz": 932.3275230361799,
+      "fft_peak_hz": 931.640625,
+      "joint_sinusoidal_fit_amplitude": 887.6834956138799
+    },
+    {
+      "midi": 83,
+      "target_hz": 987.7666025122483,
+      "fft_peak_hz": 990.234375,
+      "joint_sinusoidal_fit_amplitude": 888.029448422672
+    },
+    {
+      "midi": 84,
+      "target_hz": 1046.5022612023945,
+      "fft_peak_hz": 1048.828125,
+      "joint_sinusoidal_fit_amplitude": 888.6700337186867
+    },
+    {
+      "midi": 85,
+      "target_hz": 1108.7305239074883,
+      "fft_peak_hz": 1107.421875,
+      "joint_sinusoidal_fit_amplitude": 889.4447281186846
+    },
+    {
+      "midi": 86,
+      "target_hz": 1174.6590716696303,
+      "fft_peak_hz": 1171.875,
+      "joint_sinusoidal_fit_amplitude": 888.8112067501385
+    },
+    {
+      "midi": 87,
+      "target_hz": 1244.5079348883237,
+      "fft_peak_hz": 1242.1875,
+      "joint_sinusoidal_fit_amplitude": 888.5444195734467
+    },
+    {
+      "midi": 88,
+      "target_hz": 1318.5102276514797,
+      "fft_peak_hz": 1318.359375,
+      "joint_sinusoidal_fit_amplitude": 888.2256451002974
+    },
+    {
+      "midi": 89,
+      "target_hz": 1396.9129257320155,
+      "fft_peak_hz": 1394.53125,
+      "joint_sinusoidal_fit_amplitude": 888.3727626123728
+    },
+    {
+      "midi": 90,
+      "target_hz": 1479.9776908465376,
+      "fft_peak_hz": 1482.421875,
+      "joint_sinusoidal_fit_amplitude": 889.0092732634897
+    },
+    {
+      "midi": 91,
+      "target_hz": 1567.981743926997,
+      "fft_peak_hz": 1570.3125,
+      "joint_sinusoidal_fit_amplitude": 888.601764066822
+    }
+  ],
+  "peak": 10662,
+  "joint_fit_residual_rms": 13.426238578857653,
+  "signal_rms": 3577.395283738335,
+  "residual_ratio": 0.0037530766141189173,
+  "max_frame_cycles": 225
+}

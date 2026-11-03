@@ -1,0 +1,69 @@
+{
+  "source": "bundled local OCR + phone int8 symbol model; explicit optional FPGA inference",
+  "files": {
+    "engine.js": {
+      "bytes": 41801,
+      "sha256": "83cc09f9e7d659e616209689465ec224da01cd047ce1173160dc570a098a6c2a"
+    },
+    "index.html": {
+      "bytes": 164,
+      "sha256": "1b24cd5bfe01d3c6029c4642386cce6df13603d3e3edb22881ba652f254aa0c8"
+    },
+    "ocr/core/tesseract-core-lstm.wasm.js": {
+      "bytes": 3954181,
+      "sha256": "775a35df6f2ae100e02609443e6bd5cafcd07983dd6175454ca4a432a7730687"
+    },
+    "ocr/core/tesseract-core-simd-lstm.wasm.js": {
+      "bytes": 3954569,
+      "sha256": "9d7c43fb206dc9f48475228b46bf35f888fa9e6259da2e67d5a75c77049f2dc7"
+    },
+    "ocr/core/tesseract-core-simd.wasm.js": {
+      "bytes": 4751193,
+      "sha256": "3b0678c47a8dea6abb931b214171c08b742a5b9a9fcbbb1a028a08d5de6e9d4c"
+    },
+    "ocr/core/tesseract-core.wasm.js": {
+      "bytes": 4750805,
+      "sha256": "e66872f6a76f5ad414d73d21512245df0de3060ad4871a97c47efceaab27b955"
+    },
+    "ocr/CORE_LICENSE": {
+      "bytes": 11358,
+      "sha256": "c6596eb7be8581c18be736c846fb9173b69eccf6ef94c5135893ec56bd92ba08"
+    },
+    "ocr/lang/chi_sim.traineddata": {
+      "bytes": 13077423,
+      "sha256": "4fef2d1306c8e87616d4d3e4c6c67faf5d44be3342290cf8f2f0f6e3aa7e735b"
+    },
+    "ocr/lang/eng.traineddata": {
+      "bytes": 4113088,
+      "sha256": "7d4322bd2a7749724879683fc3912cb542f19906c83bcc1a52132556427170b2"
+    },
+    "ocr/tesseract.min.js": {
+      "bytes": 62961,
+      "sha256": "10fff78484067759c43028a02a72d76d0b90eb17302bb23b58a9ec5410bc928b"
+    },
+    "ocr/tesseract.min.js.LICENSE.txt": {
+      "bytes": 149,
+      "sha256": "cdf963ced7d25a0f98901a547647b4d6e2dbe0197fd78c87a059a87b0e542fe2"
+    },
+    "ocr/TESSERACT_JS_LICENSE.md": {
+      "bytes": 11357,
+      "sha256": "b40930bbcf80744c86c46a12bc9da056641d722716c378f5659b9e555ef833e1"
+    },
+    "ocr/TRAINEDDATA_LICENSE": {
+      "bytes": 10173,
+      "sha256": "a6cba85bc92e0cff7a450b1d873c0eaa2e9fc96bf472df0247a26bec77bf3ff9"
+    },
+    "ocr/worker.min.js": {
+      "bytes": 111162,
+      "sha256": "38645599043239c0eb6db08a6504a92dcdc292200535f3e9339cd77c4443b842"
+    },
+    "ocr/worker.min.js.LICENSE.txt": {
+      "bytes": 466,
+      "sha256": "45f54171aeaa1d10c0c1a66f374b7bba1f02472b1487fbe892eec04f840002ac"
+    },
+    "symbol_model.json": {
+      "bytes": 50224,
+      "sha256": "fb989a9ae4d2d3df67a9568b93861d72c996600af9b33a748728c70c69bc3291"
+    }
+  }
+}

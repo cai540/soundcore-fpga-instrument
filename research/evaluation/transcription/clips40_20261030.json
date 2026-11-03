@@ -1,0 +1,5 @@
+[
+  {"id":"zuguo","audio":"songs/source/wodezuguo_vocals_20261026.mp3","start_s":47.09,"duration_s":40},
+  {"id":"qiansixi","audio":"songs/source/qiansixi_vocals_20261026.mp3","start_s":20,"duration_s":40},
+  {"id":"chilege","audio":"songs/source/chilege_vocals_20261026.wav","start_s":30,"duration_s":40}
+]

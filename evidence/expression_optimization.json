@@ -1,0 +1,20 @@
+{
+  "before": {
+    "Lut": 7346,
+    "Alu": 1426,
+    "Register": 1172
+  },
+  "after": {
+    "Lut": 1816,
+    "Alu": 274,
+    "Register": 917
+  },
+  "equivalence": {
+    "approach_pairs": 65536,
+    "compared_cycles": 30000,
+    "frame_period_clocks": 256,
+    "update_clocks": 8,
+    "comparison": "frame outputs and per-voice audio service deadlines",
+    "passed": true
+  }
+}

@@ -1,0 +1,71 @@
+// LED layout: A8, B8, A9, B9, B11, A12, B12; all groups >=8.
+// CANDIDATE ONLY: Tang Mega NEO Dock rev1.4 pp.7,19; do not wire from this
+// before confirming physical J13 orientation, actual board and module levels.
+// J13 pin11 is 5V. J13 must not host SDRAM simultaneously. OLED pull-ups
+// must go to 3.3V; JDY-23 RX/TX carrier logic must be verified as 3.3V.
+IO_LOC "sys_clk" V22;
+IO_PORT "sys_clk" IO_TYPE=LVCMOS33 PULL_MODE=NONE BANK_VCCIO=3.3;
+IO_LOC "rst_n" Y12;
+IO_PORT "rst_n" IO_TYPE=LVCMOS15 PULL_MODE=UP BANK_VCCIO=1.5;
+IO_LOC "adc_cs_n" P16;
+IO_PORT "adc_cs_n" IO_TYPE=LVCMOS33 PULL_MODE=NONE DRIVE=8 BANK_VCCIO=3.3;
+IO_LOC "adc_sclk" R17;
+IO_PORT "adc_sclk" IO_TYPE=LVCMOS33 PULL_MODE=NONE DRIVE=8 BANK_VCCIO=3.3;
+IO_LOC "adc_mosi" R18;
+IO_PORT "adc_mosi" IO_TYPE=LVCMOS33 PULL_MODE=NONE DRIVE=8 BANK_VCCIO=3.3;
+IO_LOC "adc_miso" T18;
+IO_PORT "adc_miso" IO_TYPE=LVCMOS33 PULL_MODE=NONE BANK_VCCIO=3.3;
+IO_LOC "dac_bclk" Y21;
+IO_PORT "dac_bclk" IO_TYPE=LVCMOS33 PULL_MODE=NONE DRIVE=8 BANK_VCCIO=3.3;
+IO_LOC "dac_lrclk" Y22;
+IO_PORT "dac_lrclk" IO_TYPE=LVCMOS33 PULL_MODE=NONE DRIVE=8 BANK_VCCIO=3.3;
+IO_LOC "dac_din" AB21;
+IO_PORT "dac_din" IO_TYPE=LVCMOS33 PULL_MODE=NONE DRIVE=8 BANK_VCCIO=3.3;
+IO_LOC "enc_s1_n" AA20;
+IO_PORT "enc_s1_n" IO_TYPE=LVCMOS33 PULL_MODE=UP BANK_VCCIO=3.3;
+IO_LOC "enc_s2_n" AA21;
+IO_PORT "enc_s2_n" IO_TYPE=LVCMOS33 PULL_MODE=UP BANK_VCCIO=3.3;
+IO_LOC "enc_key_n" AA19;
+IO_PORT "enc_key_n" IO_TYPE=LVCMOS33 PULL_MODE=UP BANK_VCCIO=3.3;
+IO_LOC "pad_led_o[0]" A20;
+IO_PORT "pad_led_o[0]" IO_TYPE=LVCMOS33 PULL_MODE=NONE DRIVE=8 BANK_VCCIO=3.3;
+IO_LOC "pad_led_o[1]" B20;
+IO_PORT "pad_led_o[1]" IO_TYPE=LVCMOS33 PULL_MODE=NONE DRIVE=8 BANK_VCCIO=3.3;
+IO_LOC "pad_led_o[2]" A21;
+IO_PORT "pad_led_o[2]" IO_TYPE=LVCMOS33 PULL_MODE=NONE DRIVE=8 BANK_VCCIO=3.3;
+IO_LOC "pad_led_o[3]" B21;
+IO_PORT "pad_led_o[3]" IO_TYPE=LVCMOS33 PULL_MODE=NONE DRIVE=8 BANK_VCCIO=3.3;
+IO_LOC "pad_led_o[4]" D17;
+IO_PORT "pad_led_o[4]" IO_TYPE=LVCMOS33 PULL_MODE=NONE DRIVE=8 BANK_VCCIO=3.3;
+IO_LOC "pad_led_o[5]" A19;
+IO_PORT "pad_led_o[5]" IO_TYPE=LVCMOS33 PULL_MODE=NONE DRIVE=8 BANK_VCCIO=3.3;
+IO_LOC "pad_led_o[6]" A18;
+IO_PORT "pad_led_o[6]" IO_TYPE=LVCMOS33 PULL_MODE=NONE DRIVE=8 BANK_VCCIO=3.3;
+// Five momentary NO buttons to GND, internally pulled to 3.3V.
+// J13: 25=A5, 26=A6, 27=WE, 28=A4, 31=CAS.
+IO_LOC "panel_bank_down_n" D15;
+IO_PORT "panel_bank_down_n" IO_TYPE=LVCMOS33 PULL_MODE=UP BANK_VCCIO=3.3;
+IO_LOC "panel_bank_up_n" D14;
+IO_PORT "panel_bank_up_n" IO_TYPE=LVCMOS33 PULL_MODE=UP BANK_VCCIO=3.3;
+IO_LOC "panel_timbre_n" D16;
+IO_PORT "panel_timbre_n" IO_TYPE=LVCMOS33 PULL_MODE=UP BANK_VCCIO=3.3;
+IO_LOC "panel_song_back_n" E16;
+IO_PORT "panel_song_back_n" IO_TYPE=LVCMOS33 PULL_MODE=UP BANK_VCCIO=3.3;
+IO_LOC "panel_play_pause_n" E17;
+IO_PORT "panel_play_pause_n" IO_TYPE=LVCMOS33 PULL_MODE=UP BANK_VCCIO=3.3;
+// J13 pin20 CLK -> B17. Logical drive for separate 5V lamp transistor only.
+IO_LOC "guide_button_led_o" B17;
+IO_PORT "guide_button_led_o" IO_TYPE=LVCMOS33 PULL_MODE=NONE DRIVE=8 BANK_VCCIO=3.3;
+// Four additional free Bank1 candidate signals, all J13 and SDRAM0 nets.
+// J13 pin19 A12 -> SOM J1 pin23 -> B18: OLED SCL, open drain.
+IO_LOC "oled_scl" B18;
+IO_PORT "oled_scl" IO_TYPE=LVCMOS33 PULL_MODE=NONE BANK_VCCIO=3.3;
+// J13 pin21 A9 -> SOM J1 pin29 -> C17: OLED SDA, open drain.
+IO_LOC "oled_sda" C17;
+IO_PORT "oled_sda" IO_TYPE=LVCMOS33 PULL_MODE=NONE BANK_VCCIO=3.3;
+// J13 pin32 RAS -> SOM J1 pin24 -> F16: JDY TXD to FPGA RX.
+IO_LOC "ble_uart_rx" F16;
+IO_PORT "ble_uart_rx" IO_TYPE=LVCMOS33 PULL_MODE=NONE BANK_VCCIO=3.3;
+// J13 pin34 BA0 -> SOM J1 pin40 -> F15: FPGA TX to JDY RXD.
+IO_LOC "ble_uart_tx" F15;
+IO_PORT "ble_uart_tx" IO_TYPE=LVCMOS33 PULL_MODE=NONE DRIVE=8 BANK_VCCIO=3.3;

@@ -1,0 +1,29 @@
+{
+  "python": "D:/FPGA/Projects/soundcore_2026/build/vocal_pitch_90_20261029/venv/Scripts/python.exe",
+  "device": "cuda:0",
+  "threads": 6,
+  "packages": [
+    "build/score_api_20261030/packages",
+    "build/tifa_20261030/packages",
+    "build/qwen_syllable_20261030/packages",
+    "build/fcpe_20261030/packages"
+  ],
+  "models": {
+    "asr": "build/qwen_syllable_20261030/checkpoint",
+    "aligner_repo": "build/tifa_20261030/repo",
+    "aligner": "build/tifa_20261030/models/TIFA-1.0",
+    "fcpe": "build/fcpe_20261030/DDSP_200k.pt",
+    "game": "build/vocal_oss_20261029/game_models/medium/GAME-1.0.3-medium-onnx",
+    "rmvpe": ".audio_models/pitch"
+  },
+  "cache": "build/vocal_decoder_refactor_20261030/model_cache",
+  "speech": {
+    "provider": "local"
+  },
+  "vision": {
+    "api_key_file": ".score-api/qwen.key",
+    "base_url": "https://dashscope.aliyuncs.com/compatible-mode/v1",
+    "model": "qwen3-vl-plus",
+    "timeout_s": 120
+  }
+}

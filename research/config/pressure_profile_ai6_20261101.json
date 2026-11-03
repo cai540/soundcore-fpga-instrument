@@ -1,0 +1,112 @@
+{
+  "schema_version": 2,
+  "profile_name": "pressure_ai6_field_estimate_20261101_v3",
+  "status": "candidate from relative endpoint plus reported approximately two-thirds full-scale; raw ADC span still unmeasured",
+  "requires_manual_calibration_each_boot": false,
+  "automatic_zero_samples_per_channel": 16,
+  "persistence": "constants synthesized into configuration image; no runtime Flash writes",
+  "observations": [
+    {
+      "terminal_volts": 1.5,
+      "adc_code_interval": [
+        819,
+        1023
+      ],
+      "channel": "AI0",
+      "evidence": "current accepted detector source comment; interval not a raw time series"
+    },
+    {
+      "terminal_volts": 2.1,
+      "adc_code_interval": [
+        1024,
+        1228
+      ],
+      "channel": "AI0",
+      "evidence": "current accepted detector source comment; do not assume terminal-to-ADC unity gain"
+    }
+  ],
+  "superseded_assumptions": "Older 2.5V-reference direct terminal-code conversions are archived design trials, not current module calibration.",
+  "curve_segments": [
+    {
+      "upper_exclusive": 281,
+      "base": 16,
+      "origin": 280,
+      "slope_q10": 0
+    },
+    {
+      "upper_exclusive": 600,
+      "base": 16,
+      "origin": 280,
+      "slope_q10": 45
+    },
+    {
+      "upper_exclusive": 819,
+      "base": 30,
+      "origin": 600,
+      "slope_q10": 90
+    },
+    {
+      "upper_exclusive": 1024,
+      "base": 50,
+      "origin": 819,
+      "slope_q10": 175
+    },
+    {
+      "upper_exclusive": 1126,
+      "base": 85,
+      "origin": 1024,
+      "slope_q10": 1723
+    },
+    {
+      "upper_exclusive": 4096,
+      "base": 255,
+      "origin": 1126,
+      "slope_q10": 0
+    }
+  ],
+  "channel_gain_q8": [
+    256,
+    256,
+    256,
+    256,
+    256,
+    256,
+    256
+  ],
+  "channel_gain_evidence": "identity post-curve gains; pad 1 attenuation removed in current product core",
+  "early_policy": {
+    "settled_follow_samples": 2,
+    "peak_margin_codes": 64,
+    "uses_rise_accent": false
+  },
+  "raw_dynamic_waveforms_available": false,
+  "empirically_trained_early_predictor": false,
+  "channel_input_scale_q12": [
+    4096,
+    4096,
+    4096,
+    4096,
+    4096,
+    4096,
+    4544
+  ],
+  "input_scale_evidence": {
+    "channel": "AI6",
+    "pad_number": 7,
+    "measured_terminal_peak_mv": 1950,
+    "reference_terminal_peak_mv": 2050,
+    "reported_by": "user on 2026-10-31; confirmed pad 7 / AI6",
+    "ratio": "71/64 candidate; not a new voltage measurement",
+    "q12_rounded": 4544,
+    "zero_terminal_assumed_near_ground": true,
+    "adc_zero": "existing 16-sample per-channel automatic baseline before scaling",
+    "actual_adc_span_measured": false,
+    "assumption": "same approximately linear analog front-end transfer across channels; measured peak voltage used as a relative span proxy",
+    "hardware_cause_verified": false,
+    "requires_board_acceptance": true,
+    "previous_q12": 4306,
+    "latest_observation": "user reports pad7 maximum force bar approximately two-thirds on EAE0",
+    "basis": "inverse of unchanged curve at approximately170/255 suggests raw span near1022 codes after prior4306/4096 normalization; candidate full-scale boundary1015 leaves a small margin",
+    "estimate_not_measurement": true
+  }
+}

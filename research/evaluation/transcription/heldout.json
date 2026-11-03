@@ -1,0 +1,31 @@
+{
+  "split": "heldout",
+  "provenance": "User-supplied score independently read; no hand-edited output pitches. Coarse outer phrase spans are locators, not note timing gold. Chilege physical octave confirmed from raw stable vowels by YIN.",
+  "timing_gold_available": false,
+  "limits": "Chilege is a different-song test; zuguo_later is same-singer temporal holdout. These are not a representative population benchmark.",
+  "cases": [
+    {
+      "id": "chilege_new_song",
+      "observations": "build/vocal_decoder_refactor_20261030/word/chilege/observations.npz",
+      "source_offset_s": 30,
+      "phrases": [
+        {"text": "心随天地走", "source_span_s": [31.2,33.7], "pitches": [64,66,59,66,64]},
+        {"text": "意被牛羊牵", "source_span_s": [33.7,37.7], "pitches": [64,66,59,57,54]},
+        {"text": "大漠的孤烟", "source_span_s": [38.6,41.2], "pitches": [64,66,59,66,64]}
+      ]
+    },
+    {
+      "id": "zuguo_later_verse",
+      "observations": "build/vocal_decoder_refactor_20261030/word/zuguo_later/observations.npz",
+      "source_offset_s": 111,
+      "phrases": [
+        {"text": "我的祖国和我", "source_span_s": [112.1,117.0], "pitches": [72,74,72,70,69,67,65,60]},
+        {"text": "像海和浪花一朵", "source_span_s": [117.1,122.1], "pitches": [65,69,77,76,74,69,72]},
+        {"text": "浪是那海的赤子", "source_span_s": [122.2,127.7], "pitches": [74,76,74,72,70,69,67,62]},
+        {"text": "海是那浪的依托", "source_span_s": [127.7,132.7], "pitches": [64,62,60,72,65,67,69]},
+        {"text": "每当大海在微笑", "source_span_s": [132.8,137.8], "pitches": [72,74,72,70,69,67,65,60]},
+        {"text": "我就是笑的漩涡", "source_span_s": [137.8,143.1], "pitches": [65,69,77,76,79,77,74]}
+      ]
+    }
+  ]
+}

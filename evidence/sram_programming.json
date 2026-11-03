@@ -1,0 +1,18 @@
+{
+  "time": "2026-11-03T10:33:56.328541+08:00",
+  "sha256": "1a03d3d8980e3c56ab4343cf27617293e6e3fb556fc2caa86057f1a64bb4706e",
+  "device": "GW5AT-60B",
+  "device_id": "0x0001481B",
+  "expected_user_code": "0x0000B713",
+  "flash_written": false,
+  "sram_program_finished": true,
+  "user_code_readback_matched": true,
+  "physical_audio_verified": false,
+  "preflight": {
+    "manifest_hash_matched": true,
+    "routed_pins_match_a6c4": true,
+    "frozen_sources_matched": true,
+    "setup_violations": 0,
+    "hold_violations": 0
+  }
+}

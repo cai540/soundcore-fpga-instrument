@@ -1,0 +1,18 @@
+{
+  "schema_version": 1,
+  "name": "mellow_reed_v3_20261102",
+  "provenance": "hand-designed algorithmic reed voicing; not a measured real-instrument calibration",
+  "sample_rate_hz": 48000,
+  "target_wave_rms": 2700,
+  "raw_weight_scale": 0.085,
+  "harmonica_soft": [1.0, 0.30, 0.10, 0.035, 0.014, 0.006],
+  "harmonica_strong": [1.0, 0.46, 0.18, 0.065, 0.025, 0.010],
+  "body": {"floor": 0.95, "peak": 0.12, "centre_hz": 1100, "width_octaves": 1.1, "rolloff_hz": 12000},
+  "harmonic_fade_start_hz": 12000,
+  "harmonic_cutoff_hz": 18000,
+  "fast_attack_samples": 128,
+  "fast_attack_fraction": 0.375,
+  "body_bloom_samples": 1024,
+  "preserve_erhu_anchors": true,
+  "requires_manual_boot_calibration": false
+}

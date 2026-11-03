@@ -1,0 +1,33 @@
+{
+  "model": "CREPE-tiny",
+  "source": "https://github.com/maxrmorrison/torchcrepe",
+  "license": "MIT",
+  "weights": "Original released pretrained weights, no project retraining",
+  "sample_rate": 16000,
+  "window": 1024,
+  "hop": 320,
+  "bins": 360,
+  "cents_origin": 1997.379408437619,
+  "cents_step": 20,
+  "checkpoint_sha256": "d4993eea36ed1a0ad9ac549c740dae5265b049ce72004f00c2f59e01c0be8432",
+  "onnx_sha256": "bfd412b7d1b8209bbd2a0ca8f3b96783a7de0ce25cfed4f7d9e9a57595747ccb",
+  "onnx_bytes": 1963200,
+  "frontend": "zero pad 512 each side; subtract window mean; divide sample standard deviation ddof1 floored at1e-10",
+  "parity": [
+    {
+      "batch": 1,
+      "max_absolute_error": 1.7881393432617188e-07
+    },
+    {
+      "batch": 7,
+      "max_absolute_error": 3.5762786865234375e-07
+    },
+    {
+      "batch": 32,
+      "max_absolute_error": 4.991888999938965e-07
+    }
+  ],
+  "third_party_api_required": false,
+  "runtime_model_download": false,
+  "acoustic_hop": 160
+}

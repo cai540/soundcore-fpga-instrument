@@ -1,0 +1,616 @@
+{
+  "official_url": "https://www.gowinsemi.com.cn/university/match2026",
+  "retrieved_date": "2026-11-03",
+  "firmware": "B713 candidate",
+  "app": "0.24",
+  "items": [
+    {
+      "id": "D1",
+      "requirement": "自研交互；至少2个独立可控演奏维度",
+      "implementation": "七片压力选音/力度＋滑杆音高＋EC11颤音深度；五键控制产品状态",
+      "source": "rtl/fsr_strike_detector.v; rtl/ec11_control.v; rtl/vibrato_bend.v",
+      "lab": "L04",
+      "status": "代码已实现；实物待测",
+      "anchors": [
+        {
+          "path": "rtl/fsr_strike_detector.v",
+          "sha256": "f373e50962d93f03d68fe178c631168cd9bece4144a2ebea69616a204ff760f8"
+        },
+        {
+          "path": "rtl/ec11_control.v",
+          "sha256": "b5e8853d88733253c5a794a0b3d3c1bee39865c159984044df6070b4038a0214"
+        },
+        {
+          "path": "rtl/vibrato_bend.v",
+          "sha256": "92de988baf5e4c050ade80550e8b721e661b36470ed79a6b924e7c22299dc738"
+        }
+      ]
+    },
+    {
+      "id": "D2",
+      "requirement": "FPGA硬件逐样本、逐声部计算；I²S到DAC",
+      "implementation": "12.288MHz流水调度，32份独立状态，48kHz标准I²S至MAX98357A",
+      "source": "rtl/poly_synth32_tm.v; rtl/i2s_stereo_tx.v; board/pressure_i2s_additive32_core.v",
+      "lab": "L02,L03",
+      "status": "代码已实现；实物待测",
+      "anchors": [
+        {
+          "path": "rtl/poly_synth32_tm.v",
+          "sha256": "9777492d11304ee7a7739db6d42a8a3201db92b02979d80c680ffe1399bb7054"
+        },
+        {
+          "path": "rtl/i2s_stereo_tx.v",
+          "sha256": "e7bf33920d043ae38cc14c134fcbadb77868af59b4e6e4905b40dce78a24b761"
+        },
+        {
+          "path": "board/pressure_i2s_additive32_core.v",
+          "sha256": "957ba031b618b92fea9a3af1118627e3c0f398f63303de729447459ac19d7482"
+        }
+      ]
+    },
+    {
+      "id": "D3",
+      "requirement": "并行/流水优势；多音色、多表情、低延迟纯硬件",
+      "implementation": "共享算术但相位/频率/包络不共享；ADC直达合成链路不经过手机",
+      "source": "rtl/playable_synth32.v; rtl/pressure_expression32.v",
+      "lab": "L03,L05,L06",
+      "status": "代码已实现；实物待测",
+      "anchors": [
+        {
+          "path": "rtl/playable_synth32.v",
+          "sha256": "1ca202bf74a1bd7daba955989c04fd66d632ede025b9088cac5d5ce3237350da"
+        },
+        {
+          "path": "rtl/pressure_expression32.v",
+          "sha256": "bfdad1c1633a89b4759c8e8ce4ef6bbf742002556f503f0cf58ed5c07f29aae5"
+        }
+      ]
+    },
+    {
+      "id": "B1.1",
+      "requirement": "自主交互与准确动作采集",
+      "implementation": "七路分压、ADC扫描、独立基线/门限/峰值/重触发；滑杆第八路",
+      "source": "rtl/mcp3208_scan.v; rtl/fsr_strike_detector.v",
+      "lab": "L01,L04",
+      "status": "代码已实现；实物待测",
+      "anchors": [
+        {
+          "path": "rtl/mcp3208_scan.v",
+          "sha256": "9a551a9ecfdedf8ff7b002881603c2cd51833b903ba4d15750f10e2cf3f5c31c"
+        },
+        {
+          "path": "rtl/fsr_strike_detector.v",
+          "sha256": "f373e50962d93f03d68fe178c631168cd9bece4144a2ebea69616a204ff760f8"
+        }
+      ]
+    },
+    {
+      "id": "B1.2",
+      "requirement": "至少2个独立维度；灵敏稳定、适配演奏",
+      "implementation": "固定选音时改压力；固定压力时改滑音，再独立改颤音深度",
+      "source": "rtl/pressure_expression32.v; rtl/vibrato_bend.v",
+      "lab": "L04,L11",
+      "status": "代码已实现；实物待测",
+      "anchors": [
+        {
+          "path": "rtl/pressure_expression32.v",
+          "sha256": "bfdad1c1633a89b4759c8e8ce4ef6bbf742002556f503f0cf58ed5c07f29aae5"
+        },
+        {
+          "path": "rtl/vibrato_bend.v",
+          "sha256": "92de988baf5e4c050ade80550e8b721e661b36470ed79a6b924e7c22299dc738"
+        }
+      ]
+    },
+    {
+      "id": "B2.1",
+      "requirement": "完整音频生成链路全部HDL；逐样本运算",
+      "implementation": "事件→分配器→相位/音色/ADSR→混音/效果→I²S；手机只发事件",
+      "source": "rtl/strike_voice_allocator32.v; rtl/poly_synth32_tm.v; rtl/audio_effects_product.v",
+      "lab": "L02,L03,L12",
+      "status": "代码已实现；实物待测",
+      "anchors": [
+        {
+          "path": "rtl/strike_voice_allocator32.v",
+          "sha256": "a8bd913fd15200e7e70f2f14dfb9021a26dbf76231ffd14522140271a096d096"
+        },
+        {
+          "path": "rtl/poly_synth32_tm.v",
+          "sha256": "9777492d11304ee7a7739db6d42a8a3201db92b02979d80c680ffe1399bb7054"
+        },
+        {
+          "path": "rtl/audio_effects_product.v",
+          "sha256": "ec8f85314f426e0ba90759e02c06973ff4a2d1cf55224e1dc0b723dd2d880a27"
+        }
+      ]
+    },
+    {
+      "id": "B2.2",
+      "requirement": "控制到音频输出总延迟≤10ms",
+      "implementation": "早触发、按声部服务、固定音频帧；实际功放输出仍须测量",
+      "source": "scripts/preflight_latency_20261101.py",
+      "lab": "L05,L06",
+      "status": "数字预检通过；总延迟未实测",
+      "anchors": [
+        {
+          "path": "scripts/preflight_latency_20261101.py",
+          "sha256": "19597d5b8b8a94854b36bd1dfb200ebf2e90f44e14b3f8f0507f8873a160acd1"
+        }
+      ]
+    },
+    {
+      "id": "B2.3",
+      "requirement": "杜绝软件串行运算滞后",
+      "implementation": "实体演奏不经过Android；App最新按键状态邮箱，无历史音符FIFO",
+      "source": "app/android/app/src/main/java/cn/soundcore/instrument/RealtimeNotes.kt",
+      "lab": "L05,L10",
+      "status": "代码已实现；实物待测",
+      "anchors": [
+        {
+          "path": "app/android/app/src/main/java/cn/soundcore/instrument/RealtimeNotes.kt",
+          "sha256": "1f69298f832ebb6dc1033ce1c714b4e08a03a74d82500c483957f927610ea57a"
+        }
+      ]
+    },
+    {
+      "id": "B3.1",
+      "requirement": "基础复音≥4；四路独立声部同时发声",
+      "implementation": "同一产品引擎可测试4/8/16/32声部，不是用4条旋律数量替代声部",
+      "source": "rtl/poly_synth32_tm.v; rtl/product_tools_engine.v",
+      "lab": "L03",
+      "status": "代码已实现；实物待测",
+      "anchors": [
+        {
+          "path": "rtl/poly_synth32_tm.v",
+          "sha256": "9777492d11304ee7a7739db6d42a8a3201db92b02979d80c680ffe1399bb7054"
+        },
+        {
+          "path": "rtl/product_tools_engine.v",
+          "sha256": "44e00f1063f956a6492db395ddf9098bc040342a2b9f325afe52177a5965f966"
+        }
+      ]
+    },
+    {
+      "id": "B3.2",
+      "requirement": "所有音频按实时演奏事件逐音逐样本生成",
+      "implementation": "内置曲目/上传曲谱都是音符事件；不是歌曲PCM播放器",
+      "source": "rtl/song_event_player.v; rtl/uploaded_song_engine.v",
+      "lab": "L08,L12",
+      "status": "代码已实现；实物待测",
+      "anchors": [
+        {
+          "path": "rtl/song_event_player.v",
+          "sha256": "ecd98e7868efb08e8631e4ae7f1eb4ad5c376ac1d24bc5ec7b8477f88fa034d4"
+        },
+        {
+          "path": "rtl/uploaded_song_engine.v",
+          "sha256": "fb9f251e2a893e9a9386ef730fbfa2ba61793986ed21c38a6ef6d02b6763afa2"
+        }
+      ]
+    },
+    {
+      "id": "B3.3",
+      "requirement": "支持单音实时变调",
+      "implementation": "独立声部可重设频率；滑杆对现场演奏连续弯音",
+      "source": "rtl/playable_synth32.v; rtl/product_tools_engine.v",
+      "lab": "L03,L04",
+      "status": "代码已实现；实物待测",
+      "anchors": [
+        {
+          "path": "rtl/playable_synth32.v",
+          "sha256": "1ca202bf74a1bd7daba955989c04fd66d632ede025b9088cac5d5ce3237350da"
+        },
+        {
+          "path": "rtl/product_tools_engine.v",
+          "sha256": "44e00f1063f956a6492db395ddf9098bc040342a2b9f325afe52177a5965f966"
+        }
+      ]
+    },
+    {
+      "id": "B3.4",
+      "requirement": "ADSR包络调控",
+      "implementation": "本轮补足真实Decay；保留既有柔和Attack，随后缓降5%至Sustain，松手Release；四参数自由编辑不在当前UI内",
+      "source": "rtl/poly_synth32_tm.v; rtl/synth_voice.v; tb/tb_product_adsr.v",
+      "lab": "L07",
+      "status": "补齐D阶段，数字回归；实物待测",
+      "anchors": [
+        {
+          "path": "rtl/poly_synth32_tm.v",
+          "sha256": "9777492d11304ee7a7739db6d42a8a3201db92b02979d80c680ffe1399bb7054"
+        },
+        {
+          "path": "rtl/synth_voice.v",
+          "sha256": "11ffa43a4fb589b7c509ee48bb3119494a3634b3c29bcd8f7458bb0a7825f77d"
+        },
+        {
+          "path": "tb/tb_product_adsr.v",
+          "sha256": "f01cf15ce77fcb1d93338d847a26fe941804d069f9f41277ecf825b462badf2c"
+        }
+      ]
+    },
+    {
+      "id": "B3.5",
+      "requirement": "多声部实时混音",
+      "implementation": "32个输出逐帧累加、限幅；每帧必须按时完成",
+      "source": "rtl/poly_synth32_tm.v; board/pressure_i2s_additive32_core.v",
+      "lab": "L03,L11",
+      "status": "代码已实现；实物待测",
+      "anchors": [
+        {
+          "path": "rtl/poly_synth32_tm.v",
+          "sha256": "9777492d11304ee7a7739db6d42a8a3201db92b02979d80c680ffe1399bb7054"
+        },
+        {
+          "path": "board/pressure_i2s_additive32_core.v",
+          "sha256": "957ba031b618b92fea9a3af1118627e3c0f398f63303de729447459ac19d7482"
+        }
+      ]
+    },
+    {
+      "id": "B3.6",
+      "requirement": "禁止预录PCM、预置音频推流、整段录音触发",
+      "implementation": "模型识别后上传音符，再由FPGA合成；设备录音仅旁路采集/回传，不送回合成输入",
+      "source": "rtl/audio_record_adpcm.v; rtl/uploaded_song_engine.v",
+      "lab": "L09,L12",
+      "status": "代码已实现；实物待测",
+      "anchors": [
+        {
+          "path": "rtl/audio_record_adpcm.v",
+          "sha256": "a116bd3eb8226c096316d1064f1896b923a9513b27ead0ea118ee78418bb841b"
+        },
+        {
+          "path": "rtl/uploaded_song_engine.v",
+          "sha256": "fb9f251e2a893e9a9386ef730fbfa2ba61793986ed21c38a6ef6d02b6763afa2"
+        }
+      ]
+    },
+    {
+      "id": "E1.1",
+      "requirement": "复音≥32，或单音加法分量≥32，或多条物理建模",
+      "implementation": "采用32独立声部这一条达标路径；三个分支是“或”，不要求全部重复实现",
+      "source": "rtl/poly_synth32_tm.v; rtl/strike_voice_allocator32.v",
+      "lab": "L03",
+      "status": "代码已实现；实物待测",
+      "anchors": [
+        {
+          "path": "rtl/poly_synth32_tm.v",
+          "sha256": "9777492d11304ee7a7739db6d42a8a3201db92b02979d80c680ffe1399bb7054"
+        },
+        {
+          "path": "rtl/strike_voice_allocator32.v",
+          "sha256": "a8bd913fd15200e7e70f2f14dfb9021a26dbf76231ffd14522140271a096d096"
+        }
+      ]
+    },
+    {
+      "id": "E1.2",
+      "requirement": "发挥并行优势、提高振荡器吞吐量",
+      "implementation": "相位/包络独立，共享流水运算；32×实测Fs。不能把一个查表声部的谐波重复算声部",
+      "source": "rtl/poly_synth32_tm.v; rtl/playable_synth32.v",
+      "lab": "L02,L03,L12",
+      "status": "代码已实现；实物待测",
+      "anchors": [
+        {
+          "path": "rtl/poly_synth32_tm.v",
+          "sha256": "9777492d11304ee7a7739db6d42a8a3201db92b02979d80c680ffe1399bb7054"
+        },
+        {
+          "path": "rtl/playable_synth32.v",
+          "sha256": "1ca202bf74a1bd7daba955989c04fd66d632ede025b9088cac5d5ce3237350da"
+        }
+      ]
+    },
+    {
+      "id": "E2.1",
+      "requirement": "≥3维表情；力度、滑音、颤音等",
+      "implementation": "力度控制幅值/表达，滑杆控制平均音高，EC11编辑颤音深度；分别固定其他两项验证",
+      "source": "rtl/pressure_expression32.v; rtl/vibrato_bend.v; rtl/front_panel_product.v",
+      "lab": "L04",
+      "status": "代码已实现；实物待测",
+      "anchors": [
+        {
+          "path": "rtl/pressure_expression32.v",
+          "sha256": "bfdad1c1633a89b4759c8e8ce4ef6bbf742002556f503f0cf58ed5c07f29aae5"
+        },
+        {
+          "path": "rtl/vibrato_bend.v",
+          "sha256": "92de988baf5e4c050ade80550e8b721e661b36470ed79a6b924e7c22299dc738"
+        },
+        {
+          "path": "rtl/front_panel_product.v",
+          "sha256": "7c56cdbec133d160a9153fc20448d66e30a552ab724f4ed25531969bc7d990e5"
+        }
+      ]
+    },
+    {
+      "id": "E2.2",
+      "requirement": "≥2种乐器音色自由切换",
+      "implementation": "口琴、二胡；空灵/金属手碟作为额外音色，不用命名替代听音验证",
+      "source": "rtl/expressive_texture.v; rtl/handpan_modal32.v; rtl/rock_voice_fx.v",
+      "lab": "L07",
+      "status": "代码已实现；实物待测",
+      "anchors": [
+        {
+          "path": "rtl/expressive_texture.v",
+          "sha256": "1250b4ca6b8a0e6be882082e6185b853b85c406558390e00761e568a0204e340"
+        },
+        {
+          "path": "rtl/handpan_modal32.v",
+          "sha256": "8017bdd48589b3f89f7d0bea7adce67b42e9ea7d34fc5df8890dfcded41f1399"
+        },
+        {
+          "path": "rtl/rock_voice_fx.v",
+          "sha256": "556fa737479f3dc5ef226b2c29f7066539acd71882955cbf5ca61a7a9df43efb"
+        }
+      ]
+    },
+    {
+      "id": "E2.3",
+      "requirement": "FPGA内部混响、延迟、合唱等效果",
+      "implementation": "三条硬件效果通路与平滑混合，比较干声/回声/合唱/混响",
+      "source": "rtl/audio_effects_product.v",
+      "lab": "L07",
+      "status": "代码已实现；实物待测",
+      "anchors": [
+        {
+          "path": "rtl/audio_effects_product.v",
+          "sha256": "ec8f85314f426e0ba90759e02c06973ff4a2d1cf55224e1dc0b723dd2d880a27"
+        }
+      ]
+    },
+    {
+      "id": "E3.1",
+      "requirement": "演奏延迟≤5ms",
+      "implementation": "70组强阶跃数字预检；另外测试弱力度。模拟功放、真实传感器部分不计为已过",
+      "source": "scripts/preflight_latency_20261101.py",
+      "lab": "L05,L06",
+      "status": "数字预检；≤5ms总输出尚未实测",
+      "anchors": [
+        {
+          "path": "scripts/preflight_latency_20261101.py",
+          "sha256": "19597d5b8b8a94854b36bd1dfb200ebf2e90f44e14b3f8f0507f8873a160acd1"
+        }
+      ]
+    },
+    {
+      "id": "E3.2",
+      "requirement": "确定性无抖动延迟",
+      "implementation": "固定256时钟/采样，状态按截止时间服务；还须测输入相位造成的界限与max−min，不能宣称异步敲击绝对零抖动",
+      "source": "rtl/i2s_stereo_tx.v; rtl/pressure_expression32.v",
+      "lab": "L02,L05,L11",
+      "status": "固定时序设计；严格无抖动尚未实测",
+      "anchors": [
+        {
+          "path": "rtl/i2s_stereo_tx.v",
+          "sha256": "e7bf33920d043ae38cc14c134fcbadb77868af59b4e6e4905b40dce78a24b761"
+        },
+        {
+          "path": "rtl/pressure_expression32.v",
+          "sha256": "bfdad1c1633a89b4759c8e8ce4ef6bbf742002556f503f0cf58ed5c07f29aae5"
+        }
+      ]
+    },
+    {
+      "id": "E3.3",
+      "requirement": "FPGA逻辑生成LED演奏指引",
+      "implementation": "原有指引下一目标；本轮补无需手机自动进入指引灯与非阻塞时值提示",
+      "source": "rtl/guide_rhythm_cue.v; board/pressure_i2s_panel_oled_ble_experiment_top.v",
+      "lab": "L08",
+      "status": "新增节奏提示，候选待上板",
+      "anchors": [
+        {
+          "path": "rtl/guide_rhythm_cue.v",
+          "sha256": "ae2cfd9b27d0f450738f81aa0d379e0bfe0528fbd8f778195b2795efec2b07b0"
+        },
+        {
+          "path": "board/pressure_i2s_panel_oled_ble_experiment_top.v",
+          "sha256": "a7baf51e5294b7362a243c20a73c83aa372ec7ae4537c9b34ec29d29a98ba4cb"
+        }
+      ]
+    },
+    {
+      "id": "E3.4",
+      "requirement": "FPGA逻辑生成李萨如图形",
+      "implementation": "单声道与延迟64个采样的信号作XY投影，在FPGA生成；不冒称独立双通道相位计",
+      "source": "rtl/product_audio_analyzer.v; rtl/oled_analysis_columns.v",
+      "lab": "L08",
+      "status": "代码已实现；实物待测",
+      "anchors": [
+        {
+          "path": "rtl/product_audio_analyzer.v",
+          "sha256": "ac90b82cb6ffe113d6516d28e6c524ca868ca32fdffe186df1aa23ef562956f5"
+        },
+        {
+          "path": "rtl/oled_analysis_columns.v",
+          "sha256": "eba66331a727880d475d92b526d204708d0b1fa6064af2b25e4937f133d1068a"
+        }
+      ]
+    },
+    {
+      "id": "E3.5",
+      "requirement": "FPGA实时频谱",
+      "implementation": "1024点硬件FFT、32个对数频带，OLED本地绘制；32声部证明另用长窗外部FFT",
+      "source": "rtl/product_audio_analyzer.v",
+      "lab": "L03,L08",
+      "status": "代码已实现；实物待测",
+      "anchors": [
+        {
+          "path": "rtl/product_audio_analyzer.v",
+          "sha256": "ac90b82cb6ffe113d6516d28e6c524ca868ca32fdffe186df1aa23ef562956f5"
+        }
+      ]
+    },
+    {
+      "id": "E3.6",
+      "requirement": "FPGA实时波形",
+      "implementation": "最终PCM旁路的极值波形；手机FPGA快照与手机麦克风数据明确区分",
+      "source": "rtl/product_audio_analyzer.v; app/android/app/src/main/java/cn/soundcore/instrument/ScopeWorkbench.kt",
+      "lab": "L08,L10",
+      "status": "代码已实现；实物待测",
+      "anchors": [
+        {
+          "path": "rtl/product_audio_analyzer.v",
+          "sha256": "ac90b82cb6ffe113d6516d28e6c524ca868ca32fdffe186df1aa23ef562956f5"
+        },
+        {
+          "path": "app/android/app/src/main/java/cn/soundcore/instrument/ScopeWorkbench.kt",
+          "sha256": "55596db4c666b7b3c62496e194785127a08757ba53852043581d8044e1a2a18f"
+        }
+      ]
+    },
+    {
+      "id": "E4.1",
+      "requirement": "脱机LED曲目指引，辅助节奏",
+      "implementation": "两首内置曲目、目标自动切音区、正确敲即前进；节奏灯不锁按键，长音/休止时值用于下一击提示",
+      "source": "rtl/song_guide_long.v; rtl/guide_rhythm_cue.v",
+      "lab": "L08",
+      "status": "代码已实现；实物待测",
+      "anchors": [
+        {
+          "path": "rtl/song_guide_long.v",
+          "sha256": "369c3142627dc28ace8d679a07d7d6d255676a33debb4a7d2731d85f617cac63"
+        },
+        {
+          "path": "rtl/guide_rhythm_cue.v",
+          "sha256": "ae2cfd9b27d0f450738f81aa0d379e0bfe0528fbd8f778195b2795efec2b07b0"
+        }
+      ]
+    },
+    {
+      "id": "E4.2",
+      "requirement": "可选蓝牙与手机App联动",
+      "implementation": "JDY优先、最多5设备；控制/状态协议与最新按键状态；不把蓝牙宣称为≤5ms通路",
+      "source": "app/android/app/src/main/java/cn/soundcore/instrument/BleController.kt",
+      "lab": "L10",
+      "status": "代码已实现；实物待测",
+      "anchors": [
+        {
+          "path": "app/android/app/src/main/java/cn/soundcore/instrument/BleController.kt",
+          "sha256": "e2c81184e7b2de78b5ca8f13afeda532984b72166d47fbd01235c13e6a0ec753"
+        }
+      ]
+    },
+    {
+      "id": "E4.3",
+      "requirement": "在线曲谱下载",
+      "implementation": "App曲谱书架30首公开来源的旋律编配，搜索/收藏后出现在App内并可离线用；不是只下到Downloads",
+      "source": "app/android/app/src/main/java/cn/soundcore/instrument/OnlineScores.kt; app/android/app/src/main/assets/scores",
+      "lab": "L09",
+      "status": "代码已实现；实物待测",
+      "anchors": [
+        {
+          "path": "app/android/app/src/main/java/cn/soundcore/instrument/OnlineScores.kt",
+          "sha256": "d5dc9396e037e82f30d4fe120f5bb7bd0df5d730181335fdf18acdb92ee6c7e7"
+        },
+        {
+          "path": "app/android/app/src/main/assets/scores",
+          "sha256": null
+        }
+      ]
+    },
+    {
+      "id": "E4.4",
+      "requirement": "演奏键位自定义",
+      "implementation": "同音区1—7排列；全体共同跟随调号、音区；指引目标优先",
+      "source": "rtl/product_tools_engine.v; app/android/app/src/main/java/cn/soundcore/instrument/ProductToolsController.kt",
+      "lab": "L09",
+      "status": "代码已实现；实物待测",
+      "anchors": [
+        {
+          "path": "rtl/product_tools_engine.v",
+          "sha256": "44e00f1063f956a6492db395ddf9098bc040342a2b9f325afe52177a5965f966"
+        },
+        {
+          "path": "app/android/app/src/main/java/cn/soundcore/instrument/ProductToolsController.kt",
+          "sha256": "237167f9b9a6f48523291d166257cb8cef719b5e0ff53aa8300f2b5bab4a00d0"
+        }
+      ]
+    },
+    {
+      "id": "E4.5",
+      "requirement": "演奏录音回传",
+      "implementation": "设备最终PCM→抗混叠降采样→8kHz IMA ADPCM，最多8秒，带偏移/CRC回传WAV",
+      "source": "rtl/audio_record_adpcm.v; app/android/app/src/main/java/cn/soundcore/instrument/ProductTools.kt",
+      "lab": "L09",
+      "status": "代码已实现；实物待测",
+      "anchors": [
+        {
+          "path": "rtl/audio_record_adpcm.v",
+          "sha256": "a116bd3eb8226c096316d1064f1896b923a9513b27ead0ea118ee78418bb841b"
+        },
+        {
+          "path": "app/android/app/src/main/java/cn/soundcore/instrument/ProductTools.kt",
+          "sha256": "5af30ea862df738a7d6d61af15f66eb23435078e3177ea8e98695d764cf9ff02"
+        }
+      ]
+    },
+    {
+      "id": "C1",
+      "requirement": "独立单元须有相位累加器、频率、包络控制",
+      "implementation": "phase[0:31]、phase_step每声部32位、envelope/state/gate_last每声部独立；一个查表振荡器按1个计",
+      "source": "rtl/poly_synth32_tm.v",
+      "lab": "L03,L12",
+      "status": "代码已实现；实物待测",
+      "anchors": [
+        {
+          "path": "rtl/poly_synth32_tm.v",
+          "sha256": "9777492d11304ee7a7739db6d42a8a3201db92b02979d80c680ffe1399bb7054"
+        }
+      ]
+    },
+    {
+      "id": "C2",
+      "requirement": "活跃可闻独立振荡器数×实际输出采样率；过采样不加分",
+      "implementation": "现场测LRCLK并听见/检出32音；若32与48k均证实，则1,536,000声部采样/秒。音量0即使计数32也不算可闻",
+      "source": "rtl/product_tools_engine.v; rtl/poly_synth32_tm.v; rtl/i2s_stereo_tx.v",
+      "lab": "L02,L03",
+      "status": "数字仿真有证据；现场三条件待测",
+      "anchors": [
+        {
+          "path": "rtl/product_tools_engine.v",
+          "sha256": "44e00f1063f956a6492db395ddf9098bc040342a2b9f325afe52177a5965f966"
+        },
+        {
+          "path": "rtl/poly_synth32_tm.v",
+          "sha256": "9777492d11304ee7a7739db6d42a8a3201db92b02979d80c680ffe1399bb7054"
+        },
+        {
+          "path": "rtl/i2s_stereo_tx.v",
+          "sha256": "e7bf33920d043ae38cc14c134fcbadb77868af59b4e6e4905b40dce78a24b761"
+        }
+      ]
+    },
+    {
+      "id": "C3",
+      "requirement": "测试多频音、对应数量独立谱峰、RTL证明无预录",
+      "implementation": "同一引擎诊断正弦MIDI60—91；单独关声部32和移动声部1频率；保存实板PCM/FFT/代码追溯",
+      "source": "tb/tb_tools_voices_i2s.v; scripts/lab_pcm_check.py",
+      "lab": "L03,L12",
+      "status": "代码已实现；实物待测",
+      "anchors": [
+        {
+          "path": "tb/tb_tools_voices_i2s.v",
+          "sha256": "1e6fda82bbea1f8a943c3026459422cd805fecac5b8b56e83253f071b4137232"
+        },
+        {
+          "path": "scripts/lab_pcm_check.py",
+          "sha256": "8732ffab26e018820da3c86c43ff5306cf4a7169a602db7bf577b034f558b870"
+        }
+      ]
+    },
+    {
+      "id": "BOARD",
+      "requirement": "限定适配Sipeed Tang系列列明板卡",
+      "implementation": "当前Tang Mega60K属于官方列出的板卡；现场拍铭牌确认具体型号",
+      "source": "board/soundcore_melody_top.v",
+      "lab": "L01",
+      "status": "代码已实现；实物待测",
+      "anchors": [
+        {
+          "path": "board/soundcore_melody_top.v",
+          "sha256": "2bb84c7420cb831056a71e05918b84e4b588269aa0ab765163678d105e75666c"
+        }
+      ]
+    }
+  ]
+}

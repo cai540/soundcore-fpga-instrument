@@ -1,0 +1,35 @@
+﻿id,requirement,implementation,source,lab,status
+D1,自研交互；至少2个独立可控演奏维度,七片压力选音/力度＋滑杆音高＋EC11颤音深度；五键控制产品状态,rtl/fsr_strike_detector.v; rtl/ec11_control.v; rtl/vibrato_bend.v,L04,代码已实现；实物待测
+D2,FPGA硬件逐样本、逐声部计算；I²S到DAC,12.288MHz流水调度，32份独立状态，48kHz标准I²S至MAX98357A,rtl/poly_synth32_tm.v; rtl/i2s_stereo_tx.v; board/pressure_i2s_additive32_core.v,"L02,L03",代码已实现；实物待测
+D3,并行/流水优势；多音色、多表情、低延迟纯硬件,共享算术但相位/频率/包络不共享；ADC直达合成链路不经过手机,rtl/playable_synth32.v; rtl/pressure_expression32.v,"L03,L05,L06",代码已实现；实物待测
+B1.1,自主交互与准确动作采集,七路分压、ADC扫描、独立基线/门限/峰值/重触发；滑杆第八路,rtl/mcp3208_scan.v; rtl/fsr_strike_detector.v,"L01,L04",代码已实现；实物待测
+B1.2,至少2个独立维度；灵敏稳定、适配演奏,固定选音时改压力；固定压力时改滑音，再独立改颤音深度,rtl/pressure_expression32.v; rtl/vibrato_bend.v,"L04,L11",代码已实现；实物待测
+B2.1,完整音频生成链路全部HDL；逐样本运算,事件→分配器→相位/音色/ADSR→混音/效果→I²S；手机只发事件,rtl/strike_voice_allocator32.v; rtl/poly_synth32_tm.v; rtl/audio_effects_product.v,"L02,L03,L12",代码已实现；实物待测
+B2.2,控制到音频输出总延迟≤10ms,早触发、按声部服务、固定音频帧；实际功放输出仍须测量,scripts/preflight_latency_20261101.py,"L05,L06",数字预检通过；总延迟未实测
+B2.3,杜绝软件串行运算滞后,实体演奏不经过Android；App最新按键状态邮箱，无历史音符FIFO,app/android/app/src/main/java/cn/soundcore/instrument/RealtimeNotes.kt,"L05,L10",代码已实现；实物待测
+B3.1,基础复音≥4；四路独立声部同时发声,同一产品引擎可测试4/8/16/32声部，不是用4条旋律数量替代声部,rtl/poly_synth32_tm.v; rtl/product_tools_engine.v,L03,代码已实现；实物待测
+B3.2,所有音频按实时演奏事件逐音逐样本生成,内置曲目/上传曲谱都是音符事件；不是歌曲PCM播放器,rtl/song_event_player.v; rtl/uploaded_song_engine.v,"L08,L12",代码已实现；实物待测
+B3.3,支持单音实时变调,独立声部可重设频率；滑杆对现场演奏连续弯音,rtl/playable_synth32.v; rtl/product_tools_engine.v,"L03,L04",代码已实现；实物待测
+B3.4,ADSR包络调控,本轮补足真实Decay；保留既有柔和Attack，随后缓降5%至Sustain，松手Release；四参数自由编辑不在当前UI内,rtl/poly_synth32_tm.v; rtl/synth_voice.v; tb/tb_product_adsr.v,L07,补齐D阶段，数字回归；实物待测
+B3.5,多声部实时混音,32个输出逐帧累加、限幅；每帧必须按时完成,rtl/poly_synth32_tm.v; board/pressure_i2s_additive32_core.v,"L03,L11",代码已实现；实物待测
+B3.6,禁止预录PCM、预置音频推流、整段录音触发,模型识别后上传音符，再由FPGA合成；设备录音仅旁路采集/回传，不送回合成输入,rtl/audio_record_adpcm.v; rtl/uploaded_song_engine.v,"L09,L12",代码已实现；实物待测
+E1.1,复音≥32，或单音加法分量≥32，或多条物理建模,采用32独立声部这一条达标路径；三个分支是“或”，不要求全部重复实现,rtl/poly_synth32_tm.v; rtl/strike_voice_allocator32.v,L03,代码已实现；实物待测
+E1.2,发挥并行优势、提高振荡器吞吐量,相位/包络独立，共享流水运算；32×实测Fs。不能把一个查表声部的谐波重复算声部,rtl/poly_synth32_tm.v; rtl/playable_synth32.v,"L02,L03,L12",代码已实现；实物待测
+E2.1,≥3维表情；力度、滑音、颤音等,力度控制幅值/表达，滑杆控制平均音高，EC11编辑颤音深度；分别固定其他两项验证,rtl/pressure_expression32.v; rtl/vibrato_bend.v; rtl/front_panel_product.v,L04,代码已实现；实物待测
+E2.2,≥2种乐器音色自由切换,口琴、二胡；空灵/金属手碟作为额外音色，不用命名替代听音验证,rtl/expressive_texture.v; rtl/handpan_modal32.v; rtl/rock_voice_fx.v,L07,代码已实现；实物待测
+E2.3,FPGA内部混响、延迟、合唱等效果,三条硬件效果通路与平滑混合，比较干声/回声/合唱/混响,rtl/audio_effects_product.v,L07,代码已实现；实物待测
+E3.1,演奏延迟≤5ms,70组强阶跃数字预检；另外测试弱力度。模拟功放、真实传感器部分不计为已过,scripts/preflight_latency_20261101.py,"L05,L06",数字预检；≤5ms总输出尚未实测
+E3.2,确定性无抖动延迟,固定256时钟/采样，状态按截止时间服务；还须测输入相位造成的界限与max−min，不能宣称异步敲击绝对零抖动,rtl/i2s_stereo_tx.v; rtl/pressure_expression32.v,"L02,L05,L11",固定时序设计；严格无抖动尚未实测
+E3.3,FPGA逻辑生成LED演奏指引,原有指引下一目标；本轮补无需手机自动进入指引灯与非阻塞时值提示,rtl/guide_rhythm_cue.v; board/pressure_i2s_panel_oled_ble_experiment_top.v,L08,新增节奏提示，候选待上板
+E3.4,FPGA逻辑生成李萨如图形,单声道与延迟64个采样的信号作XY投影，在FPGA生成；不冒称独立双通道相位计,rtl/product_audio_analyzer.v; rtl/oled_analysis_columns.v,L08,代码已实现；实物待测
+E3.5,FPGA实时频谱,1024点硬件FFT、32个对数频带，OLED本地绘制；32声部证明另用长窗外部FFT,rtl/product_audio_analyzer.v,"L03,L08",代码已实现；实物待测
+E3.6,FPGA实时波形,最终PCM旁路的极值波形；手机FPGA快照与手机麦克风数据明确区分,rtl/product_audio_analyzer.v; app/android/app/src/main/java/cn/soundcore/instrument/ScopeWorkbench.kt,"L08,L10",代码已实现；实物待测
+E4.1,脱机LED曲目指引，辅助节奏,两首内置曲目、目标自动切音区、正确敲即前进；节奏灯不锁按键，长音/休止时值用于下一击提示,rtl/song_guide_long.v; rtl/guide_rhythm_cue.v,L08,代码已实现；实物待测
+E4.2,可选蓝牙与手机App联动,JDY优先、最多5设备；控制/状态协议与最新按键状态；不把蓝牙宣称为≤5ms通路,app/android/app/src/main/java/cn/soundcore/instrument/BleController.kt,L10,代码已实现；实物待测
+E4.3,在线曲谱下载,App曲谱书架30首公开来源的旋律编配，搜索/收藏后出现在App内并可离线用；不是只下到Downloads,app/android/app/src/main/java/cn/soundcore/instrument/OnlineScores.kt; app/android/app/src/main/assets/scores,L09,代码已实现；实物待测
+E4.4,演奏键位自定义,同音区1—7排列；全体共同跟随调号、音区；指引目标优先,rtl/product_tools_engine.v; app/android/app/src/main/java/cn/soundcore/instrument/ProductToolsController.kt,L09,代码已实现；实物待测
+E4.5,演奏录音回传,设备最终PCM→抗混叠降采样→8kHz IMA ADPCM，最多8秒，带偏移/CRC回传WAV,rtl/audio_record_adpcm.v; app/android/app/src/main/java/cn/soundcore/instrument/ProductTools.kt,L09,代码已实现；实物待测
+C1,独立单元须有相位累加器、频率、包络控制,phase[0:31]、phase_step每声部32位、envelope/state/gate_last每声部独立；一个查表振荡器按1个计,rtl/poly_synth32_tm.v,"L03,L12",代码已实现；实物待测
+C2,活跃可闻独立振荡器数×实际输出采样率；过采样不加分,"现场测LRCLK并听见/检出32音；若32与48k均证实，则1,536,000声部采样/秒。音量0即使计数32也不算可闻",rtl/product_tools_engine.v; rtl/poly_synth32_tm.v; rtl/i2s_stereo_tx.v,"L02,L03",数字仿真有证据；现场三条件待测
+C3,测试多频音、对应数量独立谱峰、RTL证明无预录,同一引擎诊断正弦MIDI60—91；单独关声部32和移动声部1频率；保存实板PCM/FFT/代码追溯,tb/tb_tools_voices_i2s.v; scripts/lab_pcm_check.py,"L03,L12",代码已实现；实物待测
+BOARD,限定适配Sipeed Tang系列列明板卡,当前Tang Mega60K属于官方列出的板卡；现场拍铭牌确认具体型号,board/soundcore_melody_top.v,L01,代码已实现；实物待测

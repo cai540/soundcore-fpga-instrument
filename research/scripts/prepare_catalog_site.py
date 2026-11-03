@@ -1,0 +1,14 @@
+from pathlib import Path
+import json,shutil
+R=Path(__file__).resolve().parents[1];P=R/'build/acceptance_20261102/catalog-site/public';S=P/'scores';S.mkdir(exist_ok=True)
+data=[]
+for p in (R/'app/android/app/src/main/assets/scores').glob('*.json'):
+ shutil.copy2(p,S/p.name);s=json.loads(p.read_text('utf8'));data.append(dict(title=s['title'],url='https://soundcore-phone-lab-1030.liuwencai05.chatgpt.site/scores/'+p.name,file=p.name,credit=s['credit']))
+(S/'catalog.json').write_text(json.dumps(dict(schema='soundcore.catalog.v1',scores=data),ensure_ascii=False,indent=2),encoding='utf8')
+cards=''.join(f'<article><div class="number">0{i+1}</div><div><h2>{s["title"]}</h2><p>{s["credit"]}</p></div><a download="{s["file"]}" href="/scores/{s["file"]}">下载曲谱 ↓</a></article>'for i,s in enumerate(data))
+html='''<!doctype html><html lang="zh-CN"><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>声芯 · 曲谱书架</title>
+<style>*{box-sizing:border-box}body{margin:0;background:#071420;color:#e7f2f4;font-family:system-ui,"Microsoft YaHei",sans-serif}main{max-width:850px;margin:auto;padding:48px 24px}header{display:flex;justify-content:space-between;color:#53e1cd}header a{color:#94acb7;text-decoration:none}small{letter-spacing:4px}h1{font-size:clamp(36px,7vw,64px);margin:72px 0 20px}p{color:#94acb7;line-height:1.8}article{background:#122b39;border:1px solid #274655;border-radius:22px;margin:18px 0;padding:26px;display:flex;align-items:center;gap:24px}h2{margin:0;font-size:23px}article p{font-size:12px;margin:8px 0 0}.number{font-size:14px;color:#53e1cd}article div:nth-child(2){flex:1}article a{border-radius:14px;padding:15px 19px;background:#53e1cd;color:#071420;text-decoration:none;font-weight:600}aside{margin-top:40px;border-top:1px solid #274655;padding-top:20px}ol{line-height:2.3;color:#c1d3dc;padding-left:22px}footer{font-size:12px;color:#6d8794;margin-top:50px}@media(max-width:540px){main{padding:28px 18px}h1{margin-top:50px}article{flex-wrap:wrap;gap:16px;padding:22px}article a{width:100%;text-align:center}}</style>
+<main><header><small>声芯 / SOUNDCORE</small><a href="/">返回体验站 ↗</a></header><h1>让旋律，<br>走进你的声芯。</h1><p>下载的是可以演奏的音符，不是歌曲录音。<br>音高、节奏与休止都保存在曲谱中，下载一次，离线也能继续。</p>'''+cards+'''<aside><h2>带回 App，只需三步</h2><ol><li>下载一份曲谱文件，保留 .json 后缀。</li><li>打开声芯 App → 曲库 → 曲谱书架 → 导入曲谱文件。</li><li>载入试听，连接设备后即可上传演奏，或跟随灯光指引。</li></ol><p>每段最长40秒，较长旋律会自动分段。音色与逐音修正均在 App 中完成。<br>本目录保留体验站原有访问权限；进入时如提示登录，请使用原账号。</p></aside><footer>传统旋律 / 公版主题 · 项目独奏编配 · soundcore.score.v1<br>曲谱下载需要网络；内置录音识别与图片识谱无需外部 API。</footer></main></html>'''
+(P/'catalog.html').write_text(html,encoding='utf8')
+p=R/'app/android/app/src/main/java/cn/soundcore/instrument/MainActivity.kt';s=p.read_text('utf8').replace('chatgpt.site/catalog/','chatgpt.site/catalog.html');p.write_text(s,encoding='utf8')
+print('Prepared download page and three data files; no existing application route changed')

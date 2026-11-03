@@ -1,0 +1,217 @@
+{
+  "provenance": {
+    "kind": "observed_real_cloud_result",
+    "model": "qwen3-vl-plus",
+    "date": "2026-10-30",
+    "image_sha256": "63a4f731456057b538e50a62b38ca2bdf1386c2db3cfeeaff8d6ce632fafcbb7",
+    "expected_source": "Manually checked visible symbols; tempo glyph unreadable, default80 disclosed",
+    "physical_hardware_test": false
+  },
+  "result": {
+    "schema_version": 1,
+    "request_id": "02c6c59715c84c4bb6f66d6c37d5df53",
+    "source_sha256": "63a4f731456057b538e50a62b38ca2bdf1386c2db3cfeeaff8d6ce632fafcbb7",
+    "source_sample_rate": 0,
+    "source_duration_ms": 0,
+    "input_mode": "sheet",
+    "image_mime": "image/png",
+    "algorithm_id": "bailian-sheet-v1",
+    "vision_model": "qwen3-vl-plus",
+    "score": {
+      "title": "读谱验证曲",
+      "notation": "jianpu",
+      "tonic_midi": 60,
+      "bpm": null,
+      "numerator": 4,
+      "denominator": 4,
+      "measures": [
+        {
+          "id": 1,
+          "events": [
+            {
+              "degree": 1,
+              "octave": 0,
+              "accidental": 0,
+              "ticks": 96,
+              "tie_next": false
+            },
+            {
+              "degree": 2,
+              "octave": 0,
+              "accidental": 0,
+              "ticks": 96,
+              "tie_next": false
+            },
+            {
+              "degree": 3,
+              "octave": 0,
+              "accidental": 0,
+              "ticks": 96,
+              "tie_next": false
+            },
+            {
+              "degree": 4,
+              "octave": 0,
+              "accidental": 0,
+              "ticks": 96,
+              "tie_next": false
+            }
+          ]
+        },
+        {
+          "id": 2,
+          "events": [
+            {
+              "degree": 5,
+              "octave": 0,
+              "accidental": 0,
+              "ticks": 192,
+              "tie_next": false
+            },
+            {
+              "degree": 0,
+              "octave": 0,
+              "accidental": 0,
+              "ticks": 96,
+              "tie_next": false
+            },
+            {
+              "degree": 5,
+              "octave": 0,
+              "accidental": 0,
+              "ticks": 96,
+              "tie_next": false
+            }
+          ]
+        },
+        {
+          "id": 3,
+          "events": [
+            {
+              "degree": 6,
+              "octave": 0,
+              "accidental": 0,
+              "ticks": 96,
+              "tie_next": false
+            },
+            {
+              "degree": 5,
+              "octave": 0,
+              "accidental": 0,
+              "ticks": 96,
+              "tie_next": false
+            },
+            {
+              "degree": 3,
+              "octave": 0,
+              "accidental": 0,
+              "ticks": 96,
+              "tie_next": false
+            },
+            {
+              "degree": 2,
+              "octave": 0,
+              "accidental": 0,
+              "ticks": 96,
+              "tie_next": false
+            }
+          ]
+        },
+        {
+          "id": 4,
+          "events": [
+            {
+              "degree": 1,
+              "octave": 0,
+              "accidental": 0,
+              "ticks": 384,
+              "tie_next": false
+            }
+          ]
+        }
+      ],
+      "play_order": [
+        1,
+        2,
+        3,
+        4
+      ],
+      "warnings": []
+    },
+    "summary": {
+      "duration_ms": 12000,
+      "events": 12,
+      "notes": 11
+    },
+    "warnings": [
+      "谱面未标拍速，当前使用80 BPM，可手动调整"
+    ],
+    "cloud_usage": {
+      "prompt_tokens": 1525,
+      "completion_tokens": 663,
+      "total_tokens": 2188
+    }
+  },
+  "expected_events": [
+    [
+      0,
+      750,
+      60
+    ],
+    [
+      750,
+      750,
+      62
+    ],
+    [
+      1500,
+      750,
+      64
+    ],
+    [
+      2250,
+      750,
+      65
+    ],
+    [
+      3000,
+      1500,
+      67
+    ],
+    [
+      4500,
+      750,
+      null
+    ],
+    [
+      5250,
+      750,
+      67
+    ],
+    [
+      6000,
+      750,
+      69
+    ],
+    [
+      6750,
+      750,
+      67
+    ],
+    [
+      7500,
+      750,
+      64
+    ],
+    [
+      8250,
+      750,
+      62
+    ],
+    [
+      9000,
+      3000,
+      60
+    ]
+  ]
+}

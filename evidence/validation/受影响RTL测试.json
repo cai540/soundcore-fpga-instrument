@@ -1,0 +1,37 @@
+[
+  {
+    "test": "tb_guide_rhythm_cue",
+    "passed": true,
+    "source": "frozen B713; simulation only"
+  },
+  {
+    "test": "tb_product_adsr",
+    "passed": true,
+    "source": "frozen B713; simulation only"
+  },
+  {
+    "test": "tb_contest_guide_top",
+    "passed": true,
+    "source": "frozen B713; simulation only"
+  },
+  {
+    "test": "tb_tools_protocol",
+    "passed": true,
+    "source": "frozen B713; simulation only"
+  },
+  {
+    "test": "tb_tools_bulk_endpoint",
+    "passed": true,
+    "source": "frozen B713; simulation only"
+  },
+  {
+    "test": "tb_handpan_control",
+    "passed": true,
+    "source": "frozen B713; simulation only"
+  },
+  {
+    "test": "tb_handpan_core",
+    "passed": true,
+    "source": "frozen B713; simulation only"
+  }
+]

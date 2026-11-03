@@ -1,0 +1,12 @@
+{
+  "neural_boundary_weight": 0.25,
+  "phonetic_boundary_weight": 0.0,
+  "note_cost": 1.0,
+  "pitch_transition_weight": 0.025,
+  "tonality_weight": 1.0,
+  "acoustic_pitch_weight": 1.0,
+  "duration_weight": 1.0,
+  "likelihood_floor": 0.01,
+  "max_boundary_span": 4,
+  "phonetic_tolerance_frames": 15
+}

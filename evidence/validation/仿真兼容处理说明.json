@@ -1,0 +1,8 @@
+{
+  "include_path_spelling_only": true,
+  "top_net_initializers_expanded_to_continuous_assign": true,
+  "top_wire_declarations_first": true,
+  "expressions_changed": false,
+  "uses_vendor_ram_models": true,
+  "physical_hardware_test": false
+}

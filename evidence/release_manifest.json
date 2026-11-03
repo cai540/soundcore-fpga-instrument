@@ -1,0 +1,313 @@
+{
+  "firmware": "0x0000b713",
+  "app": "0.24-scope-lab",
+  "programmed": false,
+  "physical_acceptance": "pending",
+  "official_url": "https://www.gowinsemi.com.cn/university/match2026",
+  "atomic_requirements": 34,
+  "android_tests": {
+    "tests": 331,
+    "failures": 0,
+    "errors": 0,
+    "skipped": 8
+  },
+  "rtl_tests": [
+    {
+      "test": "tb_guide_rhythm_cue",
+      "passed": true,
+      "source": "frozen B713; simulation only"
+    },
+    {
+      "test": "tb_product_adsr",
+      "passed": true,
+      "source": "frozen B713; simulation only"
+    },
+    {
+      "test": "tb_contest_guide_top",
+      "passed": true,
+      "source": "frozen B713; simulation only"
+    },
+    {
+      "test": "tb_tools_protocol",
+      "passed": true,
+      "source": "frozen B713; simulation only"
+    },
+    {
+      "test": "tb_tools_bulk_endpoint",
+      "passed": true,
+      "source": "frozen B713; simulation only"
+    },
+    {
+      "test": "tb_handpan_control",
+      "passed": true,
+      "source": "frozen B713; simulation only"
+    },
+    {
+      "test": "tb_handpan_core",
+      "passed": true,
+      "source": "frozen B713; simulation only"
+    }
+  ],
+  "timing_violations": {
+    "Setup": 0,
+    "Hold": 0
+  },
+  "slacks_ns": {
+    "Setup": 27.285,
+    "Hold": 0.065
+  },
+  "pins_unchanged": {
+    "sys_clk": "V22",
+    "rst_n": "Y12",
+    "adc_miso": "T18",
+    "enc_s1_n": "AA20",
+    "enc_s2_n": "AA21",
+    "enc_key_n": "AA19",
+    "panel_bank_down_n": "D15",
+    "panel_bank_up_n": "D14",
+    "panel_timbre_n": "D16",
+    "panel_song_back_n": "E16",
+    "panel_play_pause_n": "E17",
+    "ble_uart_rx": "F16",
+    "adc_cs_n": "P16",
+    "adc_sclk": "R17",
+    "adc_mosi": "R18",
+    "ble_uart_tx": "F15",
+    "dac_bclk": "Y21",
+    "dac_lrclk": "Y22",
+    "dac_din": "AB21",
+    "pad_led_o[0]": "A20",
+    "pad_led_o[1]": "B20",
+    "pad_led_o[2]": "A21",
+    "pad_led_o[3]": "B21",
+    "pad_led_o[4]": "D17",
+    "pad_led_o[5]": "A19",
+    "pad_led_o[6]": "A18",
+    "guide_button_led_o": "B17",
+    "oled_scl": "B18",
+    "oled_sda": "C17"
+  },
+  "active_voices_simulated": 32,
+  "frames_max_cycles": 225,
+  "actual_sample_rate_hardware_hz": null,
+  "digital_latency_strong_ms": 3.3618484900000003,
+  "digital_latency_weak_at_abs8_ms": 4.43557621,
+  "weak_at_abs64_under5ms": false,
+  "physical_latency_ms": null,
+  "zero_jitter_measured": false,
+  "signer_sha256": "d6d6a066cddaf6267acf014430bf0dd3e12ce0027f6a4a055c3bcdde5f320abc",
+  "frozen_sources_verified": true,
+  "external_literal_hashes_verified": true,
+  "limitations": [
+    "ADC/amp/physical timing and audibility pending",
+    "phone microphone and BLE timing require a real phone",
+    "mono delayed XY is not a two-channel phase meter",
+    "9600-baud snapshots are not continuous PCM"
+  ],
+  "artifacts": {
+    "B713冻结源与本轮修改.zip": {
+      "bytes": 222632,
+      "sha256": "494d05cf65a01a9de55a6e6f2037cff695dbac064a2fff4028f29867e06e5a48"
+    },
+    "先读这里.txt": {
+      "bytes": 857,
+      "sha256": "9794a824f8ad93ef53ff3403175a560631a7c52276a33417ef236720037e189a"
+    },
+    "功放差分测量接线.png": {
+      "bytes": 58047,
+      "sha256": "2355d8af67dd404ae975c8edb332a9be4bdf8e9d7d6d75640667306bc9bee12f"
+    },
+    "功放差分测量接线.svg": {
+      "bytes": 1407,
+      "sha256": "dc766519832fc54eb602527a42700f765413450cd357227940d91e408a2b1fdd"
+    },
+    "声芯乐动_0.24_示波器验收版.apk": {
+      "bytes": 75186565,
+      "sha256": "ba357bbe68ab8b8fcf1b557ea4d6df13fadf620828c035489b829d688ee4c8bd"
+    },
+    "声芯乐动_B713_完整音响_节奏指引_ADSR.fs": {
+      "bytes": 20778184,
+      "sha256": "1a03d3d8980e3c56ab4343cf27617293e6e3fb556fc2caa86057f1a64bb4706e"
+    },
+    "实验室随身检查卡.pdf": {
+      "bytes": 78457,
+      "sha256": "307e07aaf5800a02f32d0c35401f7be4312e20d5e2e1282dc769963b64c51093"
+    },
+    "明日实验室详细指导.html": {
+      "bytes": 34353,
+      "sha256": "e0fef45156e5731cd858882390d1e7cacbb04597c98fd12e512ba20eabc90593"
+    },
+    "明日实验室详细指导.pdf": {
+      "bytes": 279289,
+      "sha256": "83d0ae7d70a6529c7536d35dc7276fd97aaea06bf4c9d53aeb9e0030d35fb78f"
+    },
+    "赛题逐项对照.csv": {
+      "bytes": 8272,
+      "sha256": "91fe01f1c0273cf80b782260c9b7308f40b87578c6e606958c0d347152fb5f6a"
+    },
+    "赛题逐项对照.json": {
+      "bytes": 24929,
+      "sha256": "af4c92e0ddc92637099980f67331d421aeb23ad3eeb55bb7a353bb69f5dcf3e9"
+    },
+    "数据分析脚本/lab_audio_inspect.py": {
+      "bytes": 7294,
+      "sha256": "9c320ca7040737979e75dc1c80d842e6bef8e5dd283e8cd590225590fd8c3508"
+    },
+    "数据分析脚本/lab_latency_summary.py": {
+      "bytes": 2329,
+      "sha256": "f413b577bf127543fc3d7d785e9800852e677373dd004523520b0952d59193c9"
+    },
+    "数据分析脚本/lab_pcm_check.py": {
+      "bytes": 3821,
+      "sha256": "8732ffab26e018820da3c86c43ff5306cf4a7169a602db7bf577b034f558b870"
+    },
+    "数据表/七片与表情.csv": {
+      "bytes": 136,
+      "sha256": "5913838622649d031c61ee8346a881f36119c0b6730b2653f32d7548d6813332"
+    },
+    "数据表/功能验收.csv": {
+      "bytes": 86,
+      "sha256": "cd13a96639d4060a45cf9d6e9d53bd225b9d6aa35b8255c4820566effac37228"
+    },
+    "数据表/声部与采样率.csv": {
+      "bytes": 154,
+      "sha256": "88b006b9367334c4c6ca68d98bdd1a90cc8fb8dc7a8d327c5c5ab89740e5bd99"
+    },
+    "数据表/延迟试次.csv": {
+      "bytes": 112,
+      "sha256": "c09feb806309014b61cb5080eb977b7c009d697ea33946d6ac4cf43290b33216"
+    },
+    "数据表/版本与供电.csv": {
+      "bytes": 133,
+      "sha256": "b29b3007ac003cdf4aa8df1206133c12113539f7a11c5190ba09b06c232f420c"
+    },
+    "界面预览/XY.png": {
+      "bytes": 79170,
+      "sha256": "69a217edac5615adcce4b9a3e34da0d76df8f488f3344b16ba80fcd8aec0c068"
+    },
+    "界面预览/横屏.png": {
+      "bytes": 73157,
+      "sha256": "e4f12ba8ef70c578651e021c13a9f86e2bea86cfa341a7a7b742dc2ef110a3e7"
+    },
+    "界面预览/波形.png": {
+      "bytes": 122220,
+      "sha256": "036f7687e8e2a88997c807d821cf8af963e2049261492be2b1b5d8a02e850e33"
+    },
+    "界面预览/频谱.png": {
+      "bytes": 80156,
+      "sha256": "3020287afe1299908d859bff7cc549190fc6f5c8573934e92a9c261304b2a42d"
+    },
+    "验证记录/32声部I2S仿真.json": {
+      "bytes": 5590,
+      "sha256": "298d9691b761750b3c0c73f49fff06f324b43a85e4e73a5cf72aa9b73913bb7b"
+    },
+    "验证记录/32声部独立控制.log": {
+      "bytes": 248,
+      "sha256": "f62b96bd71530630bbd1e0fe5cfff561ced611da42a1e878dabf7502b0aa35fe"
+    },
+    "验证记录/AndroidLint.txt": {
+      "bytes": 12594,
+      "sha256": "403fddd90729f0e12a0af17df9e57a12b2742a89a5ef45e8ab06b3be84621fed"
+    },
+    "验证记录/Android构建与检查.log": {
+      "bytes": 3369,
+      "sha256": "11c981d3a2a0d7f660be3f2d81a78b4e26001c2e10c61dd7a1dd0d9f3b587e84"
+    },
+    "验证记录/FPGA完整构建.log": {
+      "bytes": 43319,
+      "sha256": "f86416e3651a08ffbc3a85cd6924da72158b3c3a136194880c4c7b08f66d9f05"
+    },
+    "验证记录/RTL测试复现.py": {
+      "bytes": 2936,
+      "sha256": "f8b925d441ba481203ecbe698ca0328ce88647b40137087640338d3c85376c8f"
+    },
+    "验证记录/simulation_sources.py": {
+      "bytes": 1315,
+      "sha256": "4a71b4dff9e2b6ffad856a245e63958616e9e21675076ba6d20c40c6ea339067"
+    },
+    "验证记录/soundcore_speaker_omr_60k.pin.html": {
+      "bytes": 107680,
+      "sha256": "bae4cc6438c9cf4d6613320811948338b77a9ce1c39e36d20703f07a729d1b5e"
+    },
+    "验证记录/soundcore_speaker_omr_60k.rpt.txt": {
+      "bytes": 93547,
+      "sha256": "f8fbfaa841c321e37e8adc0ad7f65ce41bc7cc16473ee6a28a4a07bde37429de"
+    },
+    "验证记录/soundcore_speaker_omr_60k_tr_content.html": {
+      "bytes": 984994,
+      "sha256": "1386ae6172745ea4dc8a9c0b0453b7a5a7c1921c5d1300bc97f79d76adb7ca75"
+    },
+    "验证记录/tb_contest_guide_top.log": {
+      "bytes": 176,
+      "sha256": "30621c29b7205d816b08f32000662cb8b3874bec98857ed9b99a31da081d1e91"
+    },
+    "验证记录/tb_guide_rhythm_cue.log": {
+      "bytes": 195,
+      "sha256": "7411b0e3529015770f3cd23363f831978a80ebabdf88ceb449e1345d8a85f466"
+    },
+    "验证记录/tb_handpan_control.log": {
+      "bytes": 195,
+      "sha256": "233ed211aadc752e5207ec5172084b74590230046dee541c2a34cca19f971fa9"
+    },
+    "验证记录/tb_handpan_core.log": {
+      "bytes": 235,
+      "sha256": "4044fdebcbdc0245dcdff7094f97ae05b8479a91be8912e5e9b994ddd6175230"
+    },
+    "验证记录/tb_product_adsr.log": {
+      "bytes": 208,
+      "sha256": "7c227cdd678dc8e0fbb1dc3bac374386cbff6f2c749a08bc65146b4659062f4f"
+    },
+    "验证记录/tb_tools_bulk_endpoint.log": {
+      "bytes": 213,
+      "sha256": "9d1a87c363ec99d65e3ba363f4c795198902417ed0c328fa8d746ae33a06c4b6"
+    },
+    "验证记录/tb_tools_protocol.log": {
+      "bytes": 231,
+      "sha256": "788c4d767bdb7f038c31df13096911dd94c08ebf03f89591b9d1a83cb76aa752"
+    },
+    "验证记录/仿真兼容处理说明.json": {
+      "bytes": 249,
+      "sha256": "b7bf5834cf5f450166db33db75f6bdc8fd3e1a727219b7b54b01f020d18586b4"
+    },
+    "验证记录/冻结源SHA256.json": {
+      "bytes": 9387,
+      "sha256": "85f18d72afa261715df8f2524dbc2bac16928468711327f34b60fad1ff8b880e"
+    },
+    "验证记录/受影响RTL测试.json": {
+      "bytes": 794,
+      "sha256": "581b42511030e86833fc92464cd4b06848c5fae2dd718805ede443e6fd473f7a"
+    },
+    "验证记录/官方赛题来源SHA256.json": {
+      "bytes": 355,
+      "sha256": "a17091dc6e6b3f97801f394e262d065cb3aeac271e5c4893ec570254958f214d"
+    },
+    "验证记录/工具协议.md": {
+      "bytes": 5117,
+      "sha256": "9adc1aca3c51095dd6daefc5b91b4dbcf5e0e4660021374a78af4ee93d0a12f0"
+    },
+    "验证记录/弱阶跃64计数未通过5ms_保留失败.log": {
+      "bytes": 199,
+      "sha256": "36e21b269075774adf6f3e88b5b102d67921c6fb4cefde9cd8f68613af2d3405"
+    },
+    "验证记录/弱阶跃70组_8计数门限_非实测.csv": {
+      "bytes": 3252,
+      "sha256": "d0381b88c570bb46968984791e06c8a6ba161b3ae47929f52395746758035717"
+    },
+    "验证记录/弱阶跃70组_8计数门限_非实测.json": {
+      "bytes": 6806,
+      "sha256": "e9719c9e1beac181e0b88f0bef3d57c38cad5709f86785b3544546b11347aad5"
+    },
+    "验证记录/强阶跃70组_非实测.csv": {
+      "bytes": 3253,
+      "sha256": "68e5c11ed54b944b40da77b35bea928885e897bd6a42430ea5d49d84b4161420"
+    },
+    "验证记录/强阶跃70组_非实测.json": {
+      "bytes": 6808,
+      "sha256": "1a1a50272a2311cf6d4fc3c79b856e6c1babf46f57bc159deb6b1333de612343"
+    },
+    "验证记录/构建选项.tcl": {
+      "bytes": 264,
+      "sha256": "2e218ff4726ebf68232080d64b72dad96f447821e6295bc9c5344d5b31638650"
+    }
+  }
+}

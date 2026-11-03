@@ -1,0 +1,13 @@
+{
+  "schema_version": 2,
+  "midi_min": 36,
+  "midi_max": 107,
+  "natural_octaves": 5,
+  "startup_bank": 2,
+  "startup_key": 0,
+  "degree_semitones": [0, 2, 4, 5, 7, 9, 11],
+  "score_word": {"pitch_bits": 7, "duration_bits": 16, "rest_code": 127},
+  "commands": {"realtime_absolute": 37, "get_layout": 38, "set_key": 39, "score_absolute_begin": 56, "layout_state": 132},
+  "legacy_score_midi_min": 60,
+  "builtin_keys": [5, 2]
+}

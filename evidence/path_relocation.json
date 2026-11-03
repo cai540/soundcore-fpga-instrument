@@ -1,0 +1,20 @@
+{
+  "changed_only_for_portability": [
+    "fpga\\soundcore.gprj",
+    "fpga\\src\\assets\\76e8ed11_product_song_catalog.vh",
+    "fpga\\src\\board\\pressure_i2s_panel_oled_ble_experiment_top.v",
+    "fpga\\src\\rtl\\audio_record_adpcm.v",
+    "fpga\\src\\rtl\\expressive_texture.v",
+    "fpga\\src\\rtl\\oled_analysis_columns.v",
+    "fpga\\src\\rtl\\oled_capture_columns.v",
+    "fpga\\src\\rtl\\oled_lyric_columns.v",
+    "fpga\\src\\rtl\\oled_panel_menu_columns.v",
+    "fpga\\src\\rtl\\oled_panel_product_menu_columns.v",
+    "fpga\\src\\rtl\\poly_synth32_tm.v",
+    "fpga\\src\\rtl\\product_audio_analyzer.v",
+    "fpga\\src\\rtl\\song_lyric_position.v",
+    "fpga\\src\\rtl\\synth_voice.v"
+  ],
+  "canonical_root": "B713 frozen source; original hashes retained separately",
+  "bit_identical_rebuild": "not asserted; rerun vendor build after relocation"
+}

@@ -1,0 +1,1605 @@
+{
+  "metric_target": "character-carrier-reduction-v1",
+  "pitch_and_octave_exact": true,
+  "interpretation": "Each lyric character must have one score-supported carrier, optionally its ordered second score tone; no tolerance in semitones/octaves. This measures the requested reduced playable melody, not note-for-note restoration or rhythm accuracy.",
+  "timing_gold_available": false,
+  "text_is_evaluation_only": true,
+  "cases": [
+    {
+      "id": "zuguo",
+      "source_offset_s": 43.5,
+      "duration_s": 40,
+      "phrases": [
+        {
+          "text": "我和我的祖国",
+          "source_span_s": [
+            47.1,
+            52.1
+          ],
+          "units": [
+            {
+              "character": "我",
+              "allowed_sequences": [
+                [
+                  72
+                ]
+              ]
+            },
+            {
+              "character": "和",
+              "allowed_sequences": [
+                [
+                  74
+                ],
+                [
+                  72
+                ],
+                [
+                  74,
+                  72
+                ]
+              ]
+            },
+            {
+              "character": "我",
+              "allowed_sequences": [
+                [
+                  70
+                ],
+                [
+                  69
+                ],
+                [
+                  70,
+                  69
+                ]
+              ]
+            },
+            {
+              "character": "的",
+              "allowed_sequences": [
+                [
+                  67
+                ]
+              ]
+            },
+            {
+              "character": "祖",
+              "allowed_sequences": [
+                [
+                  65
+                ]
+              ]
+            },
+            {
+              "character": "国",
+              "allowed_sequences": [
+                [
+                  60
+                ]
+              ]
+            }
+          ]
+        },
+        {
+          "text": "一刻也不能分割",
+          "source_span_s": [
+            52.2,
+            57.4
+          ],
+          "units": [
+            {
+              "character": "一",
+              "allowed_sequences": [
+                [
+                  65
+                ]
+              ]
+            },
+            {
+              "character": "刻",
+              "allowed_sequences": [
+                [
+                  69
+                ]
+              ]
+            },
+            {
+              "character": "也",
+              "allowed_sequences": [
+                [
+                  77
+                ]
+              ]
+            },
+            {
+              "character": "不",
+              "allowed_sequences": [
+                [
+                  76
+                ]
+              ]
+            },
+            {
+              "character": "能",
+              "allowed_sequences": [
+                [
+                  74
+                ]
+              ]
+            },
+            {
+              "character": "分",
+              "allowed_sequences": [
+                [
+                  69
+                ]
+              ]
+            },
+            {
+              "character": "割",
+              "allowed_sequences": [
+                [
+                  72
+                ]
+              ]
+            }
+          ]
+        },
+        {
+          "text": "无论我走到哪里",
+          "source_span_s": [
+            57.4,
+            62.5
+          ],
+          "units": [
+            {
+              "character": "无",
+              "allowed_sequences": [
+                [
+                  74
+                ]
+              ]
+            },
+            {
+              "character": "论",
+              "allowed_sequences": [
+                [
+                  76
+                ],
+                [
+                  74
+                ],
+                [
+                  76,
+                  74
+                ]
+              ]
+            },
+            {
+              "character": "我",
+              "allowed_sequences": [
+                [
+                  72
+                ]
+              ]
+            },
+            {
+              "character": "走",
+              "allowed_sequences": [
+                [
+                  70
+                ]
+              ]
+            },
+            {
+              "character": "到",
+              "allowed_sequences": [
+                [
+                  69
+                ]
+              ]
+            },
+            {
+              "character": "哪",
+              "allowed_sequences": [
+                [
+                  67
+                ]
+              ]
+            },
+            {
+              "character": "里",
+              "allowed_sequences": [
+                [
+                  62
+                ]
+              ]
+            }
+          ]
+        },
+        {
+          "text": "都流出一首赞歌",
+          "source_span_s": [
+            62.6,
+            67.7
+          ],
+          "units": [
+            {
+              "character": "都",
+              "allowed_sequences": [
+                [
+                  64
+                ]
+              ]
+            },
+            {
+              "character": "流",
+              "allowed_sequences": [
+                [
+                  62
+                ]
+              ]
+            },
+            {
+              "character": "出",
+              "allowed_sequences": [
+                [
+                  60
+                ]
+              ]
+            },
+            {
+              "character": "一",
+              "allowed_sequences": [
+                [
+                  72
+                ]
+              ]
+            },
+            {
+              "character": "首",
+              "allowed_sequences": [
+                [
+                  65
+                ]
+              ]
+            },
+            {
+              "character": "赞",
+              "allowed_sequences": [
+                [
+                  67
+                ]
+              ]
+            },
+            {
+              "character": "歌",
+              "allowed_sequences": [
+                [
+                  69
+                ]
+              ]
+            }
+          ]
+        },
+        {
+          "text": "我歌唱每一座高山",
+          "source_span_s": [
+            67.7,
+            72.9
+          ],
+          "units": [
+            {
+              "character": "我",
+              "allowed_sequences": [
+                [
+                  72
+                ]
+              ]
+            },
+            {
+              "character": "歌",
+              "allowed_sequences": [
+                [
+                  74
+                ]
+              ]
+            },
+            {
+              "character": "唱",
+              "allowed_sequences": [
+                [
+                  72
+                ]
+              ]
+            },
+            {
+              "character": "每",
+              "allowed_sequences": [
+                [
+                  70
+                ]
+              ]
+            },
+            {
+              "character": "一",
+              "allowed_sequences": [
+                [
+                  69
+                ]
+              ]
+            },
+            {
+              "character": "座",
+              "allowed_sequences": [
+                [
+                  67
+                ]
+              ]
+            },
+            {
+              "character": "高",
+              "allowed_sequences": [
+                [
+                  65
+                ]
+              ]
+            },
+            {
+              "character": "山",
+              "allowed_sequences": [
+                [
+                  60
+                ]
+              ]
+            }
+          ]
+        },
+        {
+          "text": "我歌唱每一条河",
+          "source_span_s": [
+            73.0,
+            78.2
+          ],
+          "units": [
+            {
+              "character": "我",
+              "allowed_sequences": [
+                [
+                  65
+                ]
+              ]
+            },
+            {
+              "character": "歌",
+              "allowed_sequences": [
+                [
+                  69
+                ]
+              ]
+            },
+            {
+              "character": "唱",
+              "allowed_sequences": [
+                [
+                  77
+                ]
+              ]
+            },
+            {
+              "character": "每",
+              "allowed_sequences": [
+                [
+                  76
+                ]
+              ]
+            },
+            {
+              "character": "一",
+              "allowed_sequences": [
+                [
+                  79
+                ]
+              ]
+            },
+            {
+              "character": "条",
+              "allowed_sequences": [
+                [
+                  77
+                ]
+              ]
+            },
+            {
+              "character": "河",
+              "allowed_sequences": [
+                [
+                  74
+                ]
+              ]
+            }
+          ]
+        },
+        {
+          "text": "袅袅炊烟",
+          "source_span_s": [
+            78.2,
+            80.8
+          ],
+          "units": [
+            {
+              "character": "袅",
+              "allowed_sequences": [
+                [
+                  77
+                ]
+              ]
+            },
+            {
+              "character": "袅",
+              "allowed_sequences": [
+                [
+                  76
+                ]
+              ]
+            },
+            {
+              "character": "炊",
+              "allowed_sequences": [
+                [
+                  74
+                ]
+              ]
+            },
+            {
+              "character": "烟",
+              "allowed_sequences": [
+                [
+                  72
+                ]
+              ]
+            }
+          ]
+        },
+        {
+          "text": "小小村落",
+          "source_span_s": [
+            80.9,
+            83.5
+          ],
+          "units": [
+            {
+              "character": "小",
+              "allowed_sequences": [
+                [
+                  74
+                ]
+              ]
+            },
+            {
+              "character": "小",
+              "allowed_sequences": [
+                [
+                  72
+                ]
+              ]
+            },
+            {
+              "character": "村",
+              "allowed_sequences": [
+                [
+                  70
+                ]
+              ]
+            },
+            {
+              "character": "落",
+              "allowed_sequences": [
+                [
+                  69
+                ]
+              ]
+            }
+          ]
+        }
+      ],
+      "source_score": "songs\\source\\wodezuguo_score_20261026.jpg",
+      "source_score_sha256": "0d7c20ec3d946953660df976381dc48ee51d1b53b969cf743fcfbbde75feca3c"
+    },
+    {
+      "id": "qiansixi",
+      "source_offset_s": 22.5,
+      "duration_s": 40,
+      "phrases": [
+        {
+          "text": "嘲笑谁恃美扬威",
+          "source_span_s": [
+            24.1,
+            29.4
+          ],
+          "units": [
+            {
+              "character": "嘲",
+              "allowed_sequences": [
+                [
+                  65
+                ]
+              ]
+            },
+            {
+              "character": "笑",
+              "allowed_sequences": [
+                [
+                  64
+                ]
+              ]
+            },
+            {
+              "character": "谁",
+              "allowed_sequences": [
+                [
+                  60
+                ]
+              ]
+            },
+            {
+              "character": "恃",
+              "allowed_sequences": [
+                [
+                  60
+                ]
+              ]
+            },
+            {
+              "character": "美",
+              "allowed_sequences": [
+                [
+                  57
+                ]
+              ]
+            },
+            {
+              "character": "扬",
+              "allowed_sequences": [
+                [
+                  60
+                ]
+              ]
+            },
+            {
+              "character": "威",
+              "allowed_sequences": [
+                [
+                  62
+                ]
+              ]
+            }
+          ]
+        },
+        {
+          "text": "没了心如何相配",
+          "source_span_s": [
+            29.5,
+            34.2
+          ],
+          "units": [
+            {
+              "character": "没",
+              "allowed_sequences": [
+                [
+                  65
+                ]
+              ]
+            },
+            {
+              "character": "了",
+              "allowed_sequences": [
+                [
+                  64
+                ]
+              ]
+            },
+            {
+              "character": "心",
+              "allowed_sequences": [
+                [
+                  60
+                ]
+              ]
+            },
+            {
+              "character": "如",
+              "allowed_sequences": [
+                [
+                  60
+                ]
+              ]
+            },
+            {
+              "character": "何",
+              "allowed_sequences": [
+                [
+                  57
+                ]
+              ]
+            },
+            {
+              "character": "相",
+              "allowed_sequences": [
+                [
+                  67
+                ]
+              ]
+            },
+            {
+              "character": "配",
+              "allowed_sequences": [
+                [
+                  69
+                ]
+              ]
+            }
+          ]
+        },
+        {
+          "text": "盘铃声清脆帷幕间灯火幽微",
+          "source_span_s": [
+            34.4,
+            40.3
+          ],
+          "units": [
+            {
+              "character": "盘",
+              "allowed_sequences": [
+                [
+                  69
+                ]
+              ]
+            },
+            {
+              "character": "铃",
+              "allowed_sequences": [
+                [
+                  72
+                ]
+              ]
+            },
+            {
+              "character": "声",
+              "allowed_sequences": [
+                [
+                  67
+                ]
+              ]
+            },
+            {
+              "character": "清",
+              "allowed_sequences": [
+                [
+                  69
+                ]
+              ]
+            },
+            {
+              "character": "脆",
+              "allowed_sequences": [
+                [
+                  67
+                ]
+              ]
+            },
+            {
+              "character": "帷",
+              "allowed_sequences": [
+                [
+                  65
+                ]
+              ]
+            },
+            {
+              "character": "幕",
+              "allowed_sequences": [
+                [
+                  64
+                ]
+              ]
+            },
+            {
+              "character": "间",
+              "allowed_sequences": [
+                [
+                  65
+                ]
+              ]
+            },
+            {
+              "character": "灯",
+              "allowed_sequences": [
+                [
+                  64
+                ]
+              ]
+            },
+            {
+              "character": "火",
+              "allowed_sequences": [
+                [
+                  65
+                ]
+              ]
+            },
+            {
+              "character": "幽",
+              "allowed_sequences": [
+                [
+                  67
+                ]
+              ]
+            },
+            {
+              "character": "微",
+              "allowed_sequences": [
+                [
+                  69
+                ]
+              ]
+            }
+          ]
+        },
+        {
+          "text": "我和你最天生一对",
+          "source_span_s": [
+            40.3,
+            46.0
+          ],
+          "units": [
+            {
+              "character": "我",
+              "allowed_sequences": [
+                [
+                  67
+                ]
+              ]
+            },
+            {
+              "character": "和",
+              "allowed_sequences": [
+                [
+                  69
+                ]
+              ]
+            },
+            {
+              "character": "你",
+              "allowed_sequences": [
+                [
+                  62
+                ]
+              ]
+            },
+            {
+              "character": "最",
+              "allowed_sequences": [
+                [
+                  67
+                ]
+              ]
+            },
+            {
+              "character": "天",
+              "allowed_sequences": [
+                [
+                  69
+                ]
+              ]
+            },
+            {
+              "character": "生",
+              "allowed_sequences": [
+                [
+                  62
+                ]
+              ]
+            },
+            {
+              "character": "一",
+              "allowed_sequences": [
+                [
+                  60
+                ]
+              ]
+            },
+            {
+              "character": "对",
+              "allowed_sequences": [
+                [
+                  62
+                ]
+              ]
+            }
+          ]
+        },
+        {
+          "text": "没了你才算原罪",
+          "source_span_s": [
+            46.2,
+            51.2
+          ],
+          "units": [
+            {
+              "character": "没",
+              "allowed_sequences": [
+                [
+                  65
+                ]
+              ]
+            },
+            {
+              "character": "了",
+              "allowed_sequences": [
+                [
+                  64
+                ]
+              ]
+            },
+            {
+              "character": "你",
+              "allowed_sequences": [
+                [
+                  60
+                ]
+              ]
+            },
+            {
+              "character": "才",
+              "allowed_sequences": [
+                [
+                  60
+                ]
+              ]
+            },
+            {
+              "character": "算",
+              "allowed_sequences": [
+                [
+                  57
+                ]
+              ]
+            },
+            {
+              "character": "原",
+              "allowed_sequences": [
+                [
+                  60
+                ]
+              ]
+            },
+            {
+              "character": "罪",
+              "allowed_sequences": [
+                [
+                  62
+                ]
+              ]
+            }
+          ]
+        },
+        {
+          "text": "没了心才好相配",
+          "source_span_s": [
+            51.5,
+            56.5
+          ],
+          "units": [
+            {
+              "character": "没",
+              "allowed_sequences": [
+                [
+                  65
+                ]
+              ]
+            },
+            {
+              "character": "了",
+              "allowed_sequences": [
+                [
+                  64
+                ]
+              ]
+            },
+            {
+              "character": "心",
+              "allowed_sequences": [
+                [
+                  60
+                ]
+              ]
+            },
+            {
+              "character": "才",
+              "allowed_sequences": [
+                [
+                  60
+                ]
+              ]
+            },
+            {
+              "character": "好",
+              "allowed_sequences": [
+                [
+                  57
+                ]
+              ]
+            },
+            {
+              "character": "相",
+              "allowed_sequences": [
+                [
+                  67
+                ]
+              ]
+            },
+            {
+              "character": "配",
+              "allowed_sequences": [
+                [
+                  69
+                ]
+              ]
+            }
+          ]
+        },
+        {
+          "text": "你褴褛我彩绘并肩行过山与水",
+          "source_span_s": [
+            56.5,
+            62.5
+          ],
+          "units": [
+            {
+              "character": "你",
+              "allowed_sequences": [
+                [
+                  69
+                ]
+              ]
+            },
+            {
+              "character": "褴",
+              "allowed_sequences": [
+                [
+                  72
+                ]
+              ]
+            },
+            {
+              "character": "褛",
+              "allowed_sequences": [
+                [
+                  67
+                ]
+              ]
+            },
+            {
+              "character": "我",
+              "allowed_sequences": [
+                [
+                  69
+                ]
+              ]
+            },
+            {
+              "character": "彩",
+              "allowed_sequences": [
+                [
+                  72
+                ],
+                [
+                  67
+                ],
+                [
+                  72,
+                  67
+                ]
+              ]
+            },
+            {
+              "character": "绘",
+              "allowed_sequences": [
+                [
+                  67
+                ]
+              ]
+            },
+            {
+              "character": "并",
+              "allowed_sequences": [
+                [
+                  65
+                ]
+              ]
+            },
+            {
+              "character": "肩",
+              "allowed_sequences": [
+                [
+                  64
+                ]
+              ]
+            },
+            {
+              "character": "行",
+              "allowed_sequences": [
+                [
+                  65
+                ]
+              ]
+            },
+            {
+              "character": "过",
+              "allowed_sequences": [
+                [
+                  64
+                ]
+              ]
+            },
+            {
+              "character": "山",
+              "allowed_sequences": [
+                [
+                  65
+                ]
+              ]
+            },
+            {
+              "character": "与",
+              "allowed_sequences": [
+                [
+                  67
+                ]
+              ]
+            },
+            {
+              "character": "水",
+              "allowed_sequences": [
+                [
+                  69
+                ]
+              ]
+            }
+          ]
+        }
+      ],
+      "source_score": "songs\\source\\qiansixi_numbered_score_2026-10-26.jpg",
+      "source_score_sha256": "fb9bdf95c33a4708fb99ced3dc5ab23192376aa71f409f3aa271a06aba54db8e"
+    },
+    {
+      "id": "chilege",
+      "source_offset_s": 29.0,
+      "duration_s": 40,
+      "phrases": [
+        {
+          "text": "心随天地走",
+          "source_span_s": [
+            31.2,
+            33.7
+          ],
+          "units": [
+            {
+              "character": "心",
+              "allowed_sequences": [
+                [
+                  64
+                ]
+              ]
+            },
+            {
+              "character": "随",
+              "allowed_sequences": [
+                [
+                  66
+                ]
+              ]
+            },
+            {
+              "character": "天",
+              "allowed_sequences": [
+                [
+                  59
+                ]
+              ]
+            },
+            {
+              "character": "地",
+              "allowed_sequences": [
+                [
+                  66
+                ]
+              ]
+            },
+            {
+              "character": "走",
+              "allowed_sequences": [
+                [
+                  64
+                ]
+              ]
+            }
+          ]
+        },
+        {
+          "text": "意被牛羊牵",
+          "source_span_s": [
+            33.7,
+            38.0
+          ],
+          "units": [
+            {
+              "character": "意",
+              "allowed_sequences": [
+                [
+                  64
+                ]
+              ]
+            },
+            {
+              "character": "被",
+              "allowed_sequences": [
+                [
+                  66
+                ]
+              ]
+            },
+            {
+              "character": "牛",
+              "allowed_sequences": [
+                [
+                  59
+                ]
+              ]
+            },
+            {
+              "character": "羊",
+              "allowed_sequences": [
+                [
+                  57
+                ]
+              ]
+            },
+            {
+              "character": "牵",
+              "allowed_sequences": [
+                [
+                  54
+                ]
+              ]
+            }
+          ]
+        },
+        {
+          "text": "大漠的孤烟",
+          "source_span_s": [
+            38.6,
+            41.4
+          ],
+          "units": [
+            {
+              "character": "大",
+              "allowed_sequences": [
+                [
+                  64
+                ]
+              ]
+            },
+            {
+              "character": "漠",
+              "allowed_sequences": [
+                [
+                  66
+                ]
+              ]
+            },
+            {
+              "character": "的",
+              "allowed_sequences": [
+                [
+                  59
+                ]
+              ]
+            },
+            {
+              "character": "孤",
+              "allowed_sequences": [
+                [
+                  66
+                ]
+              ]
+            },
+            {
+              "character": "烟",
+              "allowed_sequences": [
+                [
+                  64
+                ]
+              ]
+            }
+          ]
+        },
+        {
+          "text": "拥抱落日圆",
+          "source_span_s": [
+            41.4,
+            45.5
+          ],
+          "units": [
+            {
+              "character": "拥",
+              "allowed_sequences": [
+                [
+                  64
+                ]
+              ]
+            },
+            {
+              "character": "抱",
+              "allowed_sequences": [
+                [
+                  66
+                ]
+              ]
+            },
+            {
+              "character": "落",
+              "allowed_sequences": [
+                [
+                  69
+                ]
+              ]
+            },
+            {
+              "character": "日",
+              "allowed_sequences": [
+                [
+                  71
+                ]
+              ]
+            },
+            {
+              "character": "圆",
+              "allowed_sequences": [
+                [
+                  71
+                ],
+                [
+                  66
+                ],
+                [
+                  71,
+                  66
+                ]
+              ]
+            }
+          ]
+        },
+        {
+          "text": "在天的尽头",
+          "source_span_s": [
+            46.0,
+            48.7
+          ],
+          "units": [
+            {
+              "character": "在",
+              "allowed_sequences": [
+                [
+                  66
+                ]
+              ]
+            },
+            {
+              "character": "天",
+              "allowed_sequences": [
+                [
+                  69
+                ]
+              ]
+            },
+            {
+              "character": "的",
+              "allowed_sequences": [
+                [
+                  71
+                ]
+              ]
+            },
+            {
+              "character": "尽",
+              "allowed_sequences": [
+                [
+                  69
+                ]
+              ]
+            },
+            {
+              "character": "头",
+              "allowed_sequences": [
+                [
+                  66
+                ]
+              ]
+            }
+          ]
+        },
+        {
+          "text": "与月亮聊天",
+          "source_span_s": [
+            48.7,
+            53.0
+          ],
+          "units": [
+            {
+              "character": "与",
+              "allowed_sequences": [
+                [
+                  64
+                ]
+              ]
+            },
+            {
+              "character": "月",
+              "allowed_sequences": [
+                [
+                  66
+                ]
+              ]
+            },
+            {
+              "character": "亮",
+              "allowed_sequences": [
+                [
+                  69
+                ]
+              ]
+            },
+            {
+              "character": "聊",
+              "allowed_sequences": [
+                [
+                  64
+                ]
+              ]
+            },
+            {
+              "character": "天",
+              "allowed_sequences": [
+                [
+                  59
+                ],
+                [
+                  62
+                ],
+                [
+                  59,
+                  62
+                ]
+              ]
+            }
+          ]
+        },
+        {
+          "text": "篝火映着脸",
+          "source_span_s": [
+            53.4,
+            56.1
+          ],
+          "units": [
+            {
+              "character": "篝",
+              "allowed_sequences": [
+                [
+                  64
+                ]
+              ]
+            },
+            {
+              "character": "火",
+              "allowed_sequences": [
+                [
+                  66
+                ]
+              ]
+            },
+            {
+              "character": "映",
+              "allowed_sequences": [
+                [
+                  59
+                ]
+              ]
+            },
+            {
+              "character": "着",
+              "allowed_sequences": [
+                [
+                  66
+                ]
+              ]
+            },
+            {
+              "character": "脸",
+              "allowed_sequences": [
+                [
+                  64
+                ]
+              ]
+            }
+          ]
+        },
+        {
+          "text": "醉了套马杆",
+          "source_span_s": [
+            56.1,
+            60.7
+          ],
+          "units": [
+            {
+              "character": "醉",
+              "allowed_sequences": [
+                [
+                  64
+                ]
+              ]
+            },
+            {
+              "character": "了",
+              "allowed_sequences": [
+                [
+                  66
+                ]
+              ]
+            },
+            {
+              "character": "套",
+              "allowed_sequences": [
+                [
+                  59
+                ]
+              ]
+            },
+            {
+              "character": "马",
+              "allowed_sequences": [
+                [
+                  57
+                ]
+              ]
+            },
+            {
+              "character": "杆",
+              "allowed_sequences": [
+                [
+                  57
+                ],
+                [
+                  59
+                ],
+                [
+                  57,
+                  59
+                ]
+              ]
+            }
+          ]
+        },
+        {
+          "text": "心随天地走",
+          "source_span_s": [
+            61.5,
+            63.9
+          ],
+          "units": [
+            {
+              "character": "心",
+              "allowed_sequences": [
+                [
+                  64
+                ]
+              ]
+            },
+            {
+              "character": "随",
+              "allowed_sequences": [
+                [
+                  66
+                ]
+              ]
+            },
+            {
+              "character": "天",
+              "allowed_sequences": [
+                [
+                  59
+                ]
+              ]
+            },
+            {
+              "character": "地",
+              "allowed_sequences": [
+                [
+                  66
+                ]
+              ]
+            },
+            {
+              "character": "走",
+              "allowed_sequences": [
+                [
+                  64
+                ]
+              ]
+            }
+          ]
+        },
+        {
+          "text": "寻找那达观",
+          "source_span_s": [
+            63.9,
+            69.0
+          ],
+          "units": [
+            {
+              "character": "寻",
+              "allowed_sequences": [
+                [
+                  64
+                ]
+              ]
+            },
+            {
+              "character": "找",
+              "allowed_sequences": [
+                [
+                  66
+                ]
+              ]
+            },
+            {
+              "character": "那",
+              "allowed_sequences": [
+                [
+                  69
+                ]
+              ]
+            },
+            {
+              "character": "达",
+              "allowed_sequences": [
+                [
+                  64
+                ],
+                [
+                  66
+                ],
+                [
+                  64,
+                  66
+                ]
+              ]
+            },
+            {
+              "character": "观",
+              "allowed_sequences": [
+                [
+                  66
+                ]
+              ]
+            }
+          ]
+        }
+      ],
+      "source_score": "songs\\source\\chilege_score_20261026.jpg",
+      "source_score_sha256": "d7635baf0483ce2e76ae05bac3893a613ad3f2d4797178f807b5208c7ad1b3e7"
+    }
+  ]
+}

@@ -1,0 +1,18 @@
+{
+  "variant": "public-domain demo; not B713-identical",
+  "changed_assets": [
+    "045d5c8c_lyric_guide_0.mem",
+    "1413871d_lyric_phrases.mem",
+    "87b249b2_lyric_guide_1.mem",
+    "a2721c16_lyric_text.mem",
+    "c30088c9_lyric_words_0.mem",
+    "cbde3099_lyric_starts_1.mem",
+    "f0e05512_lyric_words_1.mem",
+    "fc0eb70e_lyric_starts_0.mem",
+    "0610aea3_song_0.mem",
+    "65a91e3c_song_1.mem",
+    "76e8ed11_product_song_catalog.vh"
+  ],
+  "melody": "Twinkle Twinkle Little Star, public-domain traditional melody",
+  "lyric_timing": "cleared; no copyrighted lyric content published"
+}
