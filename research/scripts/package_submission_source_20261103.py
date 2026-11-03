@@ -89,7 +89,7 @@ def stage():
             if found:audit.append({'stage':base.name,'path':p.relative_to(base).as_posix(),'redactions':len(found)})
             t=SECRET.sub('REDACTED_CREDENTIAL',t)
             # Windows user profiles are neither a dependency nor anonymous contest content.
-            t=t.replace('C:/Users/YOUR_USER','C:/Users/YOUR_USER').replace('C:\\Users\\YOUR_USER','C:\\Users\\YOUR_USER').replace('C:\\\\Users\\\\Lwc01','C:\\\\Users\\\\YOUR_USER')
+            t=t.replace('C:/Users/YOUR_USER','C:/Users/YOUR_USER').replace('C:\\Users\\Lwc01','C:\\Users\\YOUR_USER').replace('C:\\\\Users\\\\Lwc01','C:\\\\Users\\\\YOUR_USER')
             put(p,t)
     for base in [FULL,PUB]:
         manifest={p.relative_to(base).as_posix():digest(p) for p in sorted(base.rglob('*')) if p.is_file()}
